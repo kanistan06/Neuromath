@@ -1,0 +1,380 @@
+{
+  "grades": [
+    {
+      "grade": 10,
+      "terms": [
+        {
+          "term": 1,
+          "topics": [
+            {
+              "no": 1,
+              "topic": "Perimeter",
+              "competency_levels": ["7.1"],
+              "periods": 4
+            },
+            {
+              "no": 2,
+              "topic": "Square Root",
+              "competency_levels": ["1.1"],
+              "periods": 4
+            },
+            {
+              "no": 3,
+              "topic": "Fractions",
+              "competency_levels": ["3.1"],
+              "periods": 4
+            },
+            {
+              "no": 4,
+              "topic": "Binomial Expressions",
+              "competency_levels": ["14.1"],
+              "periods": 4
+            },
+            {
+              "no": 5,
+              "topic": "Congruency",
+              "competency_levels": ["23.3"],
+              "periods": 5
+            },
+            {
+              "no": 6,
+              "topic": "Area",
+              "competency_levels": ["8.1"],
+              "periods": 4
+            },
+            {
+              "no": 7,
+              "topic": "Factors of Quadratic Expressions",
+              "competency_levels": ["15.1"],
+              "periods": 4
+            },
+            {
+              "no": 8,
+              "topic": "Triangles",
+              "competency_levels": ["23.1", "23.2", "23.4", "23.5"],
+              "periods": 10
+            },
+            {
+              "no": 9,
+              "topic": "Inverse Proportion",
+              "competency_levels": ["4.1"],
+              "periods": 5
+            },
+            {
+              "no": 10,
+              "topic": "Data Representation",
+              "competency_levels": ["28.2"],
+              "periods": 3
+            }
+          ]
+        },
+        {
+          "term": 2,
+          "topics": [
+            {
+              "no": 11,
+              "topic": "Least Common Multiple of Algebraic Expressions",
+              "competency_levels": ["16.1"],
+              "periods": 4
+            },
+            {
+              "no": 12,
+              "topic": "Algebraic Fractions",
+              "competency_levels": ["16.2"],
+              "periods": 4
+            },
+            {
+              "no": 13,
+              "topic": "Percentages",
+              "competency_levels": ["5.1", "5.2"],
+              "periods": 7
+            },
+            {
+              "no": 14,
+              "topic": "Equations",
+              "competency_levels": ["17.1", "17.2", "17.3"],
+              "periods": 8
+            },
+            {
+              "no": 15,
+              "topic": "Parallelograms I",
+              "competency_levels": ["23.6", "23.7"],
+              "periods": 7
+            },
+            {
+              "no": 16,
+              "topic": "Parallelograms II",
+              "competency_levels": ["23.8", "23.9", "23.10"],
+              "periods": 9
+            },
+            {
+              "no": 17,
+              "topic": "Sets",
+              "competency_levels": ["30.1", "30.2"],
+              "periods": 8
+            },
+            {
+              "no": 18,
+              "topic": "Logarithms I",
+              "competency_levels": ["6.1", "6.2"],
+              "periods": 5
+            },
+            {
+              "no": 19,
+              "topic": "Logarithms II",
+              "competency_levels": ["6.3", "6.4"],
+              "periods": 5
+            },
+            {
+              "no": 20,
+              "topic": "Graphs",
+              "competency_levels": ["20.1", "20.2", "20.3"],
+              "periods": 9
+            },
+            {
+              "no": 21,
+              "topic": "Rate",
+              "competency_levels": ["12.1"],
+              "periods": 5
+            }
+          ]
+        },
+        {
+          "term": 3,
+          "topics": [
+            {
+              "no": 22,
+              "topic": "Formulae",
+              "competency_levels": ["19.1"],
+              "periods": 3
+            },
+            {
+              "no": 23,
+              "topic": "Arithmetic Progressions",
+              "competency_levels": ["2.1", "2.2"],
+              "periods": 7
+            },
+            {
+              "no": 24,
+              "topic": "Algebraic Inequalities",
+              "competency_levels": ["18.1"],
+              "periods": 6
+            },
+            {
+              "no": 25,
+              "topic": "Frequency Distributions",
+              "competency_levels": ["28.1", "29.1"],
+              "periods": 10
+            },
+            {
+              "no": 26,
+              "topic": "Chords of a Circle",
+              "competency_levels": ["24.1", "24.2"],
+              "periods": 6
+            },
+            {
+              "no": 27,
+              "topic": "Constructions",
+              "competency_levels": ["27.1", "27.2", "27.3"],
+              "periods": 10
+            },
+            {
+              "no": 28,
+              "topic": "Surface Area and Volume",
+              "competency_levels": ["8.2", "8.3", "10.1", "10.2"],
+              "periods": 9
+            },
+            {
+              "no": 29,
+              "topic": "Probability",
+              "competency_levels": ["31.1", "31.2"],
+              "periods": 8
+            },
+            {
+              "no": 30,
+              "topic": "Angles in a Circle",
+              "competency_levels": ["24.3", "24.4"],
+              "periods": 8
+            },
+            {
+              "no": 31,
+              "topic": "Scale Diagrams",
+              "competency_levels": ["13.1"],
+              "periods": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "grade": 11,
+      "terms": [
+        {
+          "term": 1,
+          "topics": [
+            {
+              "no": 1,
+              "topic": "Real Numbers",
+              "competency_levels": ["1.1", "1.2", "1.3"],
+              "periods": 10
+            },
+            {
+              "no": 2,
+              "topic": "Indices and logarithms – I",
+              "competency_levels": ["6.1", "6.2"],
+              "periods": 8
+            },
+            {
+              "no": 3,
+              "topic": "Indices and logarithms – II",
+              "competency_levels": ["6.3", "6.4 (a part)"],
+              "periods": 6
+            },
+            {
+              "no": 4,
+              "topic": "Surface area of solids",
+              "competency_levels": ["8.1"],
+              "periods": 5
+            },
+            {
+              "no": 5,
+              "topic": "Volume of solids",
+              "competency_levels": ["10.1"],
+              "periods": 5
+            },
+            {
+              "no": 6,
+              "topic": "Binomial expressions",
+              "competency_levels": ["14.1"],
+              "periods": 4
+            },
+            {
+              "no": 7,
+              "topic": "Algebraic fractions",
+              "competency_levels": ["16.1"],
+              "periods": 4
+            },
+            {
+              "no": 8,
+              "topic": "Area of plane figures between parallel lines",
+              "competency_levels": ["23.1", "23.2"],
+              "periods": 12
+            }
+          ]
+        },
+        {
+          "term": 2,
+          "topics": [
+            {
+              "no": 9,
+              "topic": "Percentages",
+              "competency_levels": ["5.1", "5.2"],
+              "periods": 6
+            },
+            {
+              "no": 10,
+              "topic": "Share Market",
+              "competency_levels": ["5.3"],
+              "periods": 5
+            },
+            {
+              "no": 11,
+              "topic": "Central limit theorem",
+              "competency_levels": ["23.6"],
+              "periods": 5
+            },
+            {
+              "no": 12,
+              "topic": "Graphs",
+              "competency_levels": ["20.1", "20.2", "20.3"],
+              "periods": 12
+            },
+            {
+              "no": 13,
+              "topic": "Equations",
+              "competency_levels": ["17.1", "17.2"],
+              "periods": 10
+            },
+            {
+              "no": 14,
+              "topic": "Equiangular triangles",
+              "competency_levels": ["23.3", "23.4"],
+              "periods": 12
+            },
+            {
+              "no": 15,
+              "topic": "Data representation and prediction",
+              "competency_levels": ["28.1", "28.2", "28.3", "29.1"],
+              "periods": 12
+            },
+            {
+              "no": 16,
+              "topic": "Geometric progression",
+              "competency_levels": ["2.1"],
+              "periods": 6
+            }
+          ]
+        },
+        {
+          "term": 3,
+          "topics": [
+            {
+              "no": 17,
+              "topic": "Pythagoras theorem",
+              "competency_levels": ["23.5"],
+              "periods": 4
+            },
+            {
+              "no": 18,
+              "topic": "Trigonometry",
+              "competency_levels": ["13.1", "13.2", "6.4 (a part)"],
+              "periods": 12
+            },
+            {
+              "no": 19,
+              "topic": "Matrices",
+              "competency_levels": ["20.4"],
+              "periods": 8
+            },
+            {
+              "no": 20,
+              "topic": "Inequalities",
+              "competency_levels": ["18.1"],
+              "periods": 6
+            },
+            {
+              "no": 21,
+              "topic": "Cyclic quadrilaterals",
+              "competency_levels": ["24.1", "24.2"],
+              "periods": 10
+            },
+            {
+              "no": 22,
+              "topic": "Tangents",
+              "competency_levels": ["24.3", "24.4", "24.5"],
+              "periods": 10
+            },
+            {
+              "no": 23,
+              "topic": "Constructions",
+              "competency_levels": ["27.1", "27.2"],
+              "periods": 5
+            },
+            {
+              "no": 24,
+              "topic": "Sets",
+              "competency_levels": ["30.1"],
+              "periods": 6
+            },
+            {
+              "no": 25,
+              "topic": "Probability",
+              "competency_levels": ["31.1"],
+              "periods": 7
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

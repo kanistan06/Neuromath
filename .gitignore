@@ -1,0 +1,37 @@
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+
+# Python/runtime
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+*.log
+
+# Local databases and user data
+*.db
+*.sqlite
+*.sqlite3
+instance/*.db
+instance/*.sqlite*
+
+# Local vector/index artifacts
+chroma_db/
+.state/
+
+# Generated assessment artifacts may contain private answer keys
+generated_paper.json
+
+# Backups / temporary exports
+backups/
+*.bak
+*.tmp
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

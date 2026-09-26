@@ -1,0 +1,38 @@
+# Secrets / local configuration
+.env
+.env.*
+!.env.example
+
+# VCS / editor
+.git/
+.gitignore
+.vscode/
+.idea/
+
+# Python caches / local environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Local databases, student data and vector artifacts
+*.db
+*.sqlite
+*.sqlite3
+instance/
+chroma_db/
+.state/
+
+# Generated papers can contain private answer keys
+generated_paper.json
+
+# Logs, backups, temporary exports
+*.log
+backups/
+*.bak
+*.tmp
+
+# Developer-only caches
+.coverage
+htmlcov/

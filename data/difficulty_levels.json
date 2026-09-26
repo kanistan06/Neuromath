@@ -1,0 +1,50 @@
+[
+  {
+    "level_id": 1,
+    "name": "Remember",
+    "bloom_category": "Knowledge",
+    "description": "Recall facts, terms, basic concepts. Questions test memorisation.",
+    "question_stems": ["Define...", "List...", "State...", "Identify..."],
+    "example": "What is the capital of France?"
+  },
+  {
+    "level_id": 2,
+    "name": "Understand",
+    "bloom_category": "Comprehension",
+    "description": "Explain ideas or concepts in your own words.",
+    "question_stems": ["Explain...", "Describe...", "Summarise...", "Classify..."],
+    "example": "Explain the difference between TCP and UDP."
+  },
+  {
+    "level_id": 3,
+    "name": "Apply",
+    "bloom_category": "Application",
+    "description": "Use information in new situations or solve problems.",
+    "question_stems": ["Calculate...", "Demonstrate...", "Solve...", "Use..."],
+    "example": "Given the data set, calculate the standard deviation."
+  },
+  {
+    "level_id": 4,
+    "name": "Analyse",
+    "bloom_category": "Analysis",
+    "description": "Draw connections, compare, contrast, or break down information.",
+    "question_stems": ["Compare...", "Contrast...", "Differentiate...", "Examine..."],
+    "example": "Compare the time complexity of merge sort vs. quick sort."
+  },
+  {
+    "level_id": 5,
+    "name": "Evaluate",
+    "bloom_category": "Evaluation",
+    "description": "Justify a decision or position; critique or assess.",
+    "question_stems": ["Justify...", "Assess...", "Critique...", "Judge..."],
+    "example": "Evaluate whether a NoSQL database is appropriate for this use case."
+  },
+  {
+    "level_id": 6,
+    "name": "Create",
+    "bloom_category": "Synthesis",
+    "description": "Produce new or original work; design or construct.",
+    "question_stems": ["Design...", "Construct...", "Propose...", "Formulate..."],
+    "example": "Design a database schema for an e-commerce platform."
+  }
+]

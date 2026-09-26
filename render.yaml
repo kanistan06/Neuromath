@@ -1,0 +1,86 @@
+services:
+  - type: web
+    name: neuromath
+    runtime: docker
+    plan: starter
+    healthCheckPath: /api/health
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: FLASK_SECRET_KEY
+        generateValue: true
+      - key: PUBLIC_BASE_URL
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: RATELIMIT_STORAGE_URI
+        sync: false
+      - key: CACHE_REDIS_URL
+        sync: false
+      - key: ADMIN_EMAILS
+        value: learn@neuromath.io
+
+      - key: EMAIL_DELIVERY_MODE
+        value: smtp
+      - key: SMTP_HOST
+        value: smtp.resend.com
+      - key: SMTP_PORT
+        value: "587"
+      - key: SMTP_USERNAME
+        value: resend
+      - key: SMTP_PASSWORD
+        sync: false
+      - key: SMTP_FROM_EMAIL
+        value: learn@neuromath.io
+      - key: SMTP_FROM_NAME
+        value: NeuroMath
+
+      - key: RUNPOD_API_KEY
+        sync: false
+      - key: RUNPOD_MCQ_ENDPOINT_ID
+        sync: false
+      - key: RUNPOD_MCQ_GENERATION_MODEL
+        value: Qwen/Qwen3-4B-Instruct-2507
+      - key: RUNPOD_EMBEDDING_ENDPOINT_ID
+        sync: false
+      - key: RUNPOD_EMBEDDING_MODEL
+        value: BAAI/bge-m3
+      - key: RUNPOD_EMBEDDING_DIMENSIONS
+        value: "1024"
+      - key: RUNPOD_TIMEOUT_SECONDS
+        value: "300"
+      - key: RUNPOD_EMBEDDING_TIMEOUT_SECONDS
+        value: "180"
+
+      - key: VECTOR_STORE_PROVIDER
+        value: qdrant
+      - key: QDRANT_URL
+        sync: false
+      - key: QDRANT_API_KEY
+        sync: false
+      - key: QDRANT_COLLECTION_NAME
+        value: neuromath_mcq_content_v1
+      - key: CORPUS_VERSION
+        sync: false
+
+      - key: QUESTION_BANK_DIR
+        value: data/past_papers
+      - key: QUESTION_BANK_REQUIRED
+        value: "true"
+      - key: QUESTION_BANK_REQUIRE_REVIEW
+        value: "true"
+
+      - key: AUTO_INGEST_ON_STARTUP
+        value: "false"
+      - key: INGEST_ON_QUIZ_LOAD
+        value: "false"
+      - key: IMAGE_GEN_ENABLED
+        value: "false"
+      - key: GENERATION_MAX_WORKERS
+        value: "1"
+      - key: GENERATION_RETRY_ATTEMPTS
+        value: "3"
+      - key: OBSERVABILITY_ENABLED
+        value: "true"
+      - key: BETTER_STACK_SOURCE_TOKEN
+        sync: false

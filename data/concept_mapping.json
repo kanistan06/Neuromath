@@ -1,0 +1,566 @@
+[{
+  "main_topic": "Numbers",
+  "strands": [
+    {
+      "strand_name": "Real Numbers Progression",
+      "progression": [
+        {
+          "grade": 11,
+          "topic": "Real Numbers",
+          "competency_levels": ["1.1", "1.2", "1.3"]
+        },
+        {
+          "grade": 10,
+          "topic": "Square Root",
+          "competency_levels": ["1.1"]
+        },
+        {
+          "grade": 9,
+          "topic": "Round off & Scientific Notation",
+          "competency_levels": ["1.1", "1.2"]
+        },
+        {
+          "grade": 8,
+          "topic": "Directed Numbers",
+          "competency_levels": ["1.2"]
+        },
+        {
+          "grade": 7,
+          "topic": "Mathematical Operations on Whole Numbers",
+          "competency_levels": ["1.1"]
+        },
+        {
+          "grade": 6,
+          "topic": "Place Value",
+          "competency_levels": ["1.1"]
+        }
+      ]
+    },
+    {
+      "strand_name": "Progressions & Patterns",
+      "progression": [
+        {
+          "grade": 11,
+          "topic": "Geometric Progressions",
+          "competency_levels": ["2.1"]
+        },
+        {
+          "grade": 10,
+          "topic": "Arithmetic Progressions",
+          "competency_levels": ["2.1", "2.2"]
+        },
+        {
+          "grade": 9,
+          "topic": "Number Patterns",
+          "competency_levels": ["2.1"]
+        },
+        {
+          "grade": 8,
+          "topic": "Number Patterns",
+          "competency_levels": ["2.1"]
+        },
+        {
+          "grade": 7,
+          "topic": "Factors & Multiples",
+          "competency_levels": ["1.3", "1.4"]
+        },
+        {
+          "grade": 6,
+          "topic": "Number Patterns",
+          "competency_levels": ["2.1"]
+        }
+      ]
+    },
+    {
+      "strand_name": "Percentages & Ratios",
+      "progression": [
+        {
+          "grade": 11,
+          "topic": "Percentages, Compound Interest & Share Market",
+          "competency_levels": ["5.1", "5.2", "5.3"]
+        },
+        {
+          "grade": 10,
+          "topic": "Percentages",
+          "competency_levels": ["5.1", "5.2"]
+        },
+        {
+          "grade": 9,
+          "topic": "Percentages",
+          "competency_levels": ["5.1", "5.2"]
+        },
+        {
+          "grade": 8,
+          "topic": "Percentages",
+          "competency_levels": ["5.1", "5.2"]
+        },
+        {
+          "grade": 7,
+          "topic": "Ratios",
+          "competency_levels": ["4.1"]
+        },
+        {
+          "grade": 6,
+          "topic": "Ratio",
+          "competency_levels": ["4.1"]
+        }
+      ]
+    },
+    {
+      "strand_name": "Indices & Logarithms",
+      "progression": [
+        {
+          "grade": 11,
+          "topic": "Indices & Logarithms",
+          "competency_levels": ["6.1", "6.2", "6.3", "6.4"]
+        },
+        {
+          "grade": 10,
+          "topic": "Logarithms I & II",
+          "competency_levels": ["6.1", "6.2", "6.3", "6.4"]
+        },
+        {
+          "grade": 9,
+          "topic": "Indices",
+          "competency_levels": ["6.1"]
+        },
+        {
+          "grade": 8,
+          "topic": "Indices",
+          "competency_levels": ["6.1", "6.2"]
+        },
+        {
+          "grade": 7,
+          "topic": "Indices",
+          "competency_levels": ["6.1"]
+        },
+        {
+          "grade": 6,
+          "topic": "Repeated Multiplication",
+          "competency_levels": ["1.4", "1.5"]
+        }
+      ]
+    }
+  ]
+},
+{
+  "main_topic": "Measurements",
+  "strands": [
+    {
+      "strand_name": "Surface Area",
+      "progression": [
+        {"grade": 11, "topic": "Surface Area of Solids", "competency_levels": ["8.1"]},
+        {"grade": 10, "topic": "Surface Area & Volume", "competency_levels": ["8.2", "8.3", "10.1", "10.2"]},
+        {"grade": 9, "topic": "Area", "competency_levels": ["8.1"]},
+        {"grade": 8, "topic": "Area", "competency_levels": ["8.1", "8.2"]},
+        {"grade": 7, "topic": "Area", "competency_levels": ["8.1"]},
+        {"grade": 6, "topic": "Area", "competency_levels": ["8.1"]}
+      ]
+    },
+    {
+      "strand_name": "Volume",
+      "progression": [
+        {"grade": 11, "topic": "Volume of Solids", "competency_levels": ["10.1"]},
+        {"grade": 10, "topic": "Surface Area & Volume", "competency_levels": ["8.2", "8.3", "10.1", "10.2"]},
+        {"grade": 9, "topic": "Liquid Measurements", "competency_levels": ["11.1"]},
+        {"grade": 8, "topic": "Volume & Capacity", "competency_levels": ["10.1", "11.1"]},
+        {"grade": 7, "topic": "Volume", "competency_levels": ["10.1"]},
+        {"grade": 6, "topic": "Liquid Measurements", "competency_levels": ["11.1"]}
+      ]
+    },
+    {
+      "strand_name": "Trigonometry Applications",
+      "progression": [
+        {"grade": 11, "topic": "Problems on Trigonometric Ratios", "competency_levels": ["13.2"]},
+        {"grade": 11, "topic": "Identifying Trigonometric Ratios", "competency_levels": ["13.1"]},
+        {"grade": 10, "topic": "Trigonometry", "competency_levels": ["13.1"]},
+        {"grade": 9, "topic": "Angles of a Triangle", "competency_levels": ["23.2", "23.3"]},
+        {"grade": 8, "topic": "Angles", "competency_levels": ["21.1"]},
+        {"grade": 7, "topic": "Angles", "competency_levels": ["21.1", "21.2"]},
+        {"grade": 6, "topic": "Angles", "competency_levels": ["21.1"]}
+      ]
+    }
+  ]
+},
+{
+  "main_topic": "Geometry",
+  "strands": [
+    {
+      "strand_name": "Equiangular Triangles",
+      "progression": [
+        {
+          "grade": 11,
+          "topic": "Equiangular Triangles",
+          "competency_levels": ["23.3", "23.4"]
+        },
+        {
+          "grade": 10,
+          "topic": "Triangles",
+          "competency_levels": ["23.1", "23.2", "23.3", "23.5"]
+        },
+        {
+          "grade": 9,
+          "topic": "Angles of a Triangle",
+          "competency_levels": ["23.2", "23.3"]
+        },
+        { "grade": 8, "topic": "Triangles", "competency_levels": ["23.1"] },
+        {
+          "grade": 7,
+          "topic": "Rectilinear Plane Figures",
+          "competency_levels": ["23.1", "23.2"]
+        },
+        {
+          "grade": 6,
+          "topic": "Rectilinear Plane Figures",
+          "competency_levels": ["23.1"]
+        }
+      ]
+    },
+    {
+      "strand_name": "Pythagoras",
+      "progression": [
+        {
+          "grade": 11,
+          "topic": "Pythagoras Theorem",
+          "competency_levels": ["23.5"]
+        },
+        {
+          "grade": 9,
+          "topic": "Pythagoras Relationship",
+          "competency_levels": ["23.5"]
+        },
+        { "grade": 8, "topic": "Triangles", "competency_levels": ["23.1"] },
+        {
+          "grade": 7,
+          "topic": "Rectilinear Plane Figures",
+          "competency_levels": ["23.1", "23.2"]
+        },
+        {
+          "grade": 6,
+          "topic": "Rectilinear Plane Figures",
+          "competency_levels": ["23.1"]
+        }
+      ]
+    },
+    {
+      "strand_name": "Trigonometry",
+      "progression": [
+        {
+          "grade": 11,
+          "topic": "Trigonometry",
+          "competency_levels": ["13.1", "13.2"]
+        },
+        { "grade": 10, "topic": "Trigonometry", "competency_levels": ["13.1"] },
+        {
+          "grade": 9,
+          "topic": "Angles of a Triangle",
+          "competency_levels": ["23.2", "23.3"]
+        },
+        { "grade": 8, "topic": "Angles", "competency_levels": ["21.1"] },
+        {
+          "grade": 7,
+          "topic": "Angles",
+          "competency_levels": ["21.1", "21.2"]
+        },
+        { "grade": 6, "topic": "Angles", "competency_levels": ["21.1"] }
+      ]
+    },
+    {
+      "strand_name": "Cyclic Quadrilaterals",
+      "progression": [
+        {
+          "grade": 11,
+          "topic": "Cyclic Quadrilaterals",
+          "competency_levels": ["24.1", "24.2"]
+        },
+        {
+          "grade": 10,
+          "topic": "Angles in a Circle",
+          "competency_levels": ["24.3", "24.4"]
+        },
+        {
+          "grade": 9,
+          "topic": "Angles in a Circle",
+          "competency_levels": ["24.3", "24.4"]
+        },
+        { "grade": 8, "topic": "Circle", "competency_levels": ["24.1"] },
+        { "grade": 7, "topic": "Circles", "competency_levels": ["24.1"] },
+        { "grade": 6, "topic": "Circles", "competency_levels": ["24.1"] }
+      ]
+    },
+    {
+      "strand_name": "Tangents",
+      "progression": [
+        {
+          "grade": 11,
+          "topic": "Tangents",
+          "competency_levels": ["24.4", "24.5"]
+        },
+        {
+          "grade": 10,
+          "topic": "Chords of a Circle",
+          "competency_levels": ["24.1", "24.2"]
+        },
+        {
+          "grade": 9,
+          "topic": "Circumference of a Circle",
+          "competency_levels": ["7.1"]
+        },
+        { "grade": 8, "topic": "Circle", "competency_levels": ["24.1"] },
+        { "grade": 7, "topic": "Circles", "competency_levels": ["24.1"] },
+        { "grade": 6, "topic": "Circles", "competency_levels": ["24.1"] }
+      ]
+    },
+    {
+      "strand_name": "Constructions",
+      "progression": [
+        {
+          "grade": 11,
+          "topic": "Constructions",
+          "competency_levels": ["27.1", "27.2"]
+        },
+        {
+          "grade": 10,
+          "topic": "Constructions",
+          "competency_levels": ["27.1", "27.2", "27.3"]
+        },
+        {
+          "grade": 9,
+          "topic": "Loci & Constructions",
+          "competency_levels": ["27.1", "27.2"]
+        },
+        {
+          "grade": 8,
+          "topic": "Triangle Constructions",
+          "competency_levels": ["27.1"]
+        },
+        {
+          "grade": 7,
+          "topic": "Construction of Plane Figures",
+          "competency_levels": ["27.2"]
+        },
+        {
+          "grade": 6,
+          "topic": "Rectilinear Plane Figures",
+          "competency_levels": ["23.1"]
+        }
+      ]
+    }
+  ]
+},
+{
+  "main_topic": "Algebra",
+  "strands": [
+    {
+      "strand_name": "Algebraic Expressions",
+      "progression": [
+        {
+          "grade": 11,
+          "topic": "Binomial Expressions",
+          "competency_levels": ["14.1"]
+        },
+        {
+          "grade": 10,
+          "topic": "Binomial Expressions",
+          "competency_levels": ["14.1"]
+        },
+        {
+          "grade": 9,
+          "topic": "Algebraic Expressions",
+          "competency_levels": ["14.1", "14.2"]
+        },
+        {
+          "grade": 8,
+          "topic": "Algebraic Expressions",
+          "competency_levels": ["14.1"]
+        },
+        {
+          "grade": 7,
+          "topic": "Algebraic Expressions",
+          "competency_levels": ["14.1", "14.2"]
+        },
+        {
+          "grade": 6,
+          "topic": "Constructing Algebraic Expressions",
+          "competency_levels": ["14.2"]
+        }
+      ]
+    },
+    {
+      "strand_name": "Algebraic Fractions",
+      "progression": [
+        {
+          "grade": 11,
+          "topic": "Algebraic Fractions",
+          "competency_levels": ["16.1"]
+        },
+        {
+          "grade": 10,
+          "topic": "Algebraic Fractions",
+          "competency_levels": ["16.2"]
+        },
+        {
+          "grade": 9,
+          "topic": "Algebraic Fractions",
+          "competency_levels": ["16.1"]
+        },
+        {
+          "grade": 8,
+          "topic": "Fractions",
+          "competency_levels": ["3.1", "3.2"]
+        },
+        { "grade": 7, "topic": "Fractions", "competency_levels": ["3.1"] },
+        { "grade": 6, "topic": "Fractions", "competency_levels": ["3.1"] }
+      ]
+    },
+    {
+      "strand_name": "Equations & Inequalities",
+      "progression": [
+        { "grade": 11, "topic": "Inequalities", "competency_levels": ["18.1"] },
+        {
+          "grade": 11,
+          "topic": "Equations",
+          "competency_levels": ["17.1", "17.2"]
+        },
+        {
+          "grade": 10,
+          "topic": "Equations & Inequalities",
+          "competency_levels": ["17.1", "18.1"]
+        },
+        {
+          "grade": 9,
+          "topic": "Equations & Inequalities",
+          "competency_levels": ["17.1", "18.1"]
+        },
+        { "grade": 8, "topic": "Equations", "competency_levels": ["17.1"] },
+        {
+          "grade": 7,
+          "topic": "Equations & Formulae",
+          "competency_levels": ["17.1", "19.1"]
+        },
+        { "grade": 6, "topic": "Substitution", "competency_levels": ["14.2"] }
+      ]
+    },
+    {
+      "strand_name": "Matrices & Graphs",
+      "progression": [
+        { "grade": 11, "topic": "Matrices", "competency_levels": ["20.4"] },
+        {
+          "grade": 11,
+          "topic": "Graphs",
+          "competency_levels": ["20.1", "20.2", "20.3"]
+        },
+        {
+          "grade": 10,
+          "topic": "Graphs",
+          "competency_levels": ["20.1", "20.2"]
+        },
+        { "grade": 9, "topic": "Graphs", "competency_levels": ["20.1"] },
+        {
+          "grade": 8,
+          "topic": "Cartesian Plane",
+          "competency_levels": ["20.1"]
+        },
+        {
+          "grade": 7,
+          "topic": "Cartesian Plane",
+          "competency_levels": ["20.1"]
+        },
+        { "grade": 6, "topic": "Number Line", "competency_levels": ["1.1"] }
+      ]
+    }
+  ]
+},
+{
+  "main_topic": "Statistics",
+  "strands": [
+    {
+      "strand_name": "Statistics Progression",
+      "progression": [
+        {
+          "grade": 11,
+          "topic": "Central Limit Theorem",
+          "competency_levels": ["23.6"]
+        },
+        {
+          "grade": 11,
+          "topic": "Data Representation & Prediction",
+          "competency_levels": ["28.1", "28.2", "28.3", "29.1"]
+        },
+        {
+          "grade": 10,
+          "topic": "Frequency Distributions",
+          "competency_levels": ["28.1", "29.1"]
+        },
+        {
+          "grade": 9,
+          "topic": "Data Representation & Prediction",
+          "competency_levels": ["28.1", "29.1"]
+        },
+        {
+          "grade": 8,
+          "topic": "Data Representation & Interpretation",
+          "competency_levels": ["18.1", "29.1", "29.2"]
+        },
+        {
+          "grade": 7,
+          "topic": "Data Representation & Interpretation",
+          "competency_levels": ["28.1", "29.1"]
+        },
+        {
+          "grade": 6,
+          "topic": "Data Collection & Interpretation",
+          "competency_levels": ["28.1"]
+        }
+      ]
+    }
+  ]
+},
+{
+  "main_topic": "Sets & Probability",
+  "strands": [
+    {
+      "strand_name": "Sets",
+      "progression": [
+        { "grade": 11, "topic": "Sets", "competency_levels": ["30.1"] },
+        { "grade": 10, "topic": "Sets", "competency_levels": ["30.1", "30.2"] },
+        { "grade": 9, "topic": "Sets", "competency_levels": ["30.1"] },
+        { "grade": 8, "topic": "Sets", "competency_levels": ["30.1"] },
+        { "grade": 7, "topic": "Sets", "competency_levels": ["30.1"] },
+        {
+          "grade": 6,
+          "topic": "Selecting (Basic Set Idea)",
+          "competency_levels": ["30.1"]
+        }
+      ]
+    },
+    {
+      "strand_name": "Probability",
+      "progression": [
+        { "grade": 11, "topic": "Probability", "competency_levels": ["31.1"] },
+        {
+          "grade": 10,
+          "topic": "Probability",
+          "competency_levels": ["31.1", "31.2"]
+        },
+        { "grade": 9, "topic": "Probability", "competency_levels": ["31.1"] },
+        {
+          "grade": 8,
+          "topic": "Probability",
+          "competency_levels": ["31.1", "31.2"]
+        },
+        {
+          "grade": 7,
+          "topic": "Likelihood of an Event",
+          "competency_levels": ["31.1", "31.2"]
+        },
+        {
+          "grade": 6,
+          "topic": "Likelihood of an Event",
+          "competency_levels": ["31.1"]
+        }
+      ]
+    }
+  ]
+}
+]

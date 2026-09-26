@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://neuromath.io/schemas/question-bank-v1.json",
+  "title": "NeuroMath Past-Paper Question Bank",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "questions"],
+  "properties": {
+    "schema_version": {
+      "const": "1"
+    },
+    "questions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/question"
+      }
+    }
+  },
+  "$defs": {
+    "question": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "question_id",
+        "year",
+        "paper",
+        "question_number",
+        "grade",
+        "concept_id",
+        "concept_name",
+        "question",
+        "answer",
+        "source_file",
+        "source_page",
+        "mapping_status",
+        "reviewed_by",
+        "reviewed_at",
+        "mapping_evidence"
+      ],
+      "properties": {
+        "question_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+        },
+        "year": {
+          "type": "integer",
+          "minimum": 1900,
+          "maximum": 2100
+        },
+        "paper": {
+          "type": "string",
+          "minLength": 1
+        },
+        "question_number": {
+          "type": "string",
+          "minLength": 1
+        },
+        "grade": {
+          "enum": [10, 11]
+        },
+        "concept_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "concept_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "competency_level": {
+          "type": "string"
+        },
+        "question": {
+          "type": "string",
+          "minLength": 1
+        },
+        "options": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "answer": {
+          "type": "string",
+          "minLength": 1
+        },
+        "solution": {
+          "type": "string"
+        },
+        "source_file": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_page": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "mapping_status": {
+          "const": "verified"
+        },
+        "reviewed_by": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reviewed_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "mapping_evidence": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

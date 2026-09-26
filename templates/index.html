@@ -1,0 +1,904 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NeuroMath</title>
+    <meta
+      name="description"
+      content="NeuroMath — Personalised AI Math Assistant for Secondary School Students. MCQ practice and guidance."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=STIX+Two+Math&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="0"
+      height="0"
+      class="neuromath-mark-defs"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <defs>
+        <symbol id="neuromath-mark" viewBox="0 0 72 90">
+          <text
+            x="0"
+            y="64"
+            font-size="56"
+            font-family="'STIX Two Math', 'Cambria Math', Georgia, serif"
+            font-style="normal"
+            fill="currentColor"
+          >
+            &#8747;
+          </text>
+          <text
+            x="40"
+            y="82"
+            font-size="15"
+            font-family="Inter, system-ui, sans-serif"
+            font-weight="600"
+            fill="currentColor"
+          >
+            0
+          </text>
+          <text
+            x="38"
+            y="26"
+            font-size="17"
+            font-family="Inter, system-ui, sans-serif"
+            font-weight="700"
+            fill="currentColor"
+          >
+            M
+          </text>
+        </symbol>
+      </defs>
+    </svg>
+    <!-- Auth Overlay -->
+    <div id="auth-overlay" class="auth-overlay">
+      <div class="auth-card glass">
+        <div class="auth-brand">
+          <span
+            class="neuromath-logo neuromath-logo--auth"
+            title="NeuroMath: integral from 0 to M (S … M)"
+            aria-hidden="true"
+          >
+            <svg viewBox="0 0 72 90" xmlns="http://www.w3.org/2000/svg" focusable="false">
+              <use href="#neuromath-mark" />
+            </svg>
+          </span>
+          <h1 class="brand-title">NeuroMath</h1>
+          <p class="brand-tagline">
+            Personalised AI Math Assistant for Secondary School Students.
+          </p>
+        </div>
+
+        <div class="auth-tabs" role="tablist">
+          <button
+            class="auth-tab active"
+            id="tab-signin-btn"
+            role="tab"
+            aria-selected="true"
+            onclick="switchAuthTab('signin')"
+          >
+            Sign In
+          </button>
+          <button
+            class="auth-tab"
+            id="tab-signup-btn"
+            role="tab"
+            aria-selected="false"
+            onclick="switchAuthTab('signup')"
+          >
+            Sign Up
+          </button>
+        </div>
+
+        <!-- Sign In -->
+        <div id="panel-signin" class="auth-panel active">
+          <div class="field-group">
+            <label class="field-label" for="siEmail">Email Address (Username)</label>
+            <input
+              class="field-input"
+              id="siEmail"
+              type="email"
+              placeholder="you@example.com"
+              autocomplete="email"
+              inputmode="email"
+              autocapitalize="none"
+              spellcheck="false"
+              maxlength="254"
+              required
+            />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="siPassword">Password</label>
+            <input
+              class="field-input"
+              id="siPassword"
+              type="password"
+              placeholder="Your password"
+              autocomplete="current-password"
+            />
+          </div>
+          <div id="siError" class="auth-error hidden"></div>
+          <button
+            class="btn-secondary full-width hidden"
+            id="btnResendVerification"
+            type="button"
+            onclick="doResendVerification()"
+          >
+            Resend verification email
+          </button>
+          <button
+            class="btn-primary full-width"
+            id="btnSignIn"
+            onclick="doSignIn()"
+          >
+            <span id="btnSignInLabel">Sign In</span>
+            <span class="spinner hidden" id="spinSignIn"></span>
+          </button>
+          <p class="auth-switch">
+            <a href="#" onclick="switchAuthView('forgot'); return false;">Forgot password?</a>
+          </p>
+          <p class="auth-switch">
+            No account?
+            <a href="#" onclick="switchAuthTab('signup'); return false;">Create one</a>
+          </p>
+        </div>
+
+        <!-- Sign Up -->
+        <div id="panel-signup" class="auth-panel">
+          <div class="field-group">
+            <label class="field-label" for="suName">Full Name</label>
+            <input
+              class="field-input"
+              id="suName"
+              type="text"
+              placeholder="e.g. Alice Johnson"
+              autocomplete="name"
+            />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="suEmail">Email Address (Username)</label>
+            <input
+              class="field-input"
+              id="suEmail"
+              type="email"
+              placeholder="you@example.com"
+              autocomplete="email"
+              inputmode="email"
+              autocapitalize="none"
+              spellcheck="false"
+              maxlength="254"
+              required
+            />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="suPassword">Password</label>
+            <input
+              class="field-input"
+              id="suPassword"
+              type="password"
+              placeholder="12+ characters with mixed character types"
+              autocomplete="new-password"
+              minlength="12"
+              required
+            />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="suPasswordConfirm">Confirm Password</label>
+            <input
+              class="field-input"
+              id="suPasswordConfirm"
+              type="password"
+              placeholder="Re-enter your password"
+              autocomplete="new-password"
+              minlength="12"
+              required
+            />
+          </div>
+          <div id="suError" class="auth-error hidden"></div>
+          <button
+            class="btn-primary full-width"
+            id="btnSignUp"
+            onclick="doSignUp()"
+          >
+            <span id="btnSignUpLabel">Create Account</span>
+            <span class="spinner hidden" id="spinSignUp"></span>
+          </button>
+          <p class="auth-switch">
+            Already registered?
+            <a href="#" onclick="switchAuthTab('signin'); return false;">Sign in</a>
+          </p>
+        </div>
+
+        <!-- Forgot Password -->
+        <div id="panel-forgot" class="auth-panel">
+          <div class="field-group">
+            <label class="field-label" for="forgotEmail">Email Address</label>
+            <input
+              class="field-input"
+              id="forgotEmail"
+              type="email"
+              placeholder="you@example.com"
+              autocomplete="email"
+              inputmode="email"
+              autocapitalize="none"
+              spellcheck="false"
+              maxlength="254"
+              required
+            />
+          </div>
+          <div id="forgotError" class="auth-error hidden"></div>
+          <button
+            class="btn-primary full-width"
+            id="btnForgotPassword"
+            type="button"
+            onclick="doForgotPassword()"
+          >
+            <span id="btnForgotPasswordLabel">Send Reset OTP</span>
+            <span class="spinner hidden" id="spinForgotPassword"></span>
+          </button>
+          <p class="auth-switch">
+            <a href="#" onclick="switchAuthTab('signin'); return false;">Back to sign in</a>
+          </p>
+        </div>
+
+        <!-- Reset Password -->
+        <div id="panel-reset" class="auth-panel">
+          <div class="field-group">
+            <label class="field-label" for="resetEmail">Email Address</label>
+            <input
+              class="field-input"
+              id="resetEmail"
+              type="email"
+              placeholder="you@example.com"
+              autocomplete="email"
+              inputmode="email"
+              autocapitalize="none"
+              spellcheck="false"
+              maxlength="254"
+              required
+            />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="resetOtp">6-digit OTP</label>
+            <input
+              class="field-input"
+              id="resetOtp"
+              type="text"
+              placeholder="000000"
+              autocomplete="one-time-code"
+              inputmode="numeric"
+              pattern="[0-9]{6}"
+              minlength="6"
+              maxlength="6"
+              required
+            />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="resetPassword">New Password</label>
+            <input
+              class="field-input"
+              id="resetPassword"
+              type="password"
+              placeholder="12+ characters with mixed character types"
+              autocomplete="new-password"
+              minlength="12"
+              required
+            />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="resetPasswordConfirm">Confirm New Password</label>
+            <input
+              class="field-input"
+              id="resetPasswordConfirm"
+              type="password"
+              placeholder="Re-enter your new password"
+              autocomplete="new-password"
+              minlength="12"
+              required
+            />
+          </div>
+          <div id="resetError" class="auth-error hidden"></div>
+          <button
+            class="btn-primary full-width"
+            id="btnResetPassword"
+            type="button"
+            onclick="doResetPassword()"
+          >
+            <span id="btnResetPasswordLabel">Update Password</span>
+            <span class="spinner hidden" id="spinResetPassword"></span>
+          </button>
+          <p class="auth-switch">
+            <a href="#" onclick="switchAuthTab('signin'); return false;">Back to sign in</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main App Shell -->
+    <div id="app" class="app hidden">
+      <div
+        id="sidebarBackdrop"
+        class="sidebar-backdrop"
+        onclick="toggleSidebar()"
+        aria-hidden="true"
+      ></div>
+      <!-- Sidebar -->
+      <aside id="sidebar" class="sidebar" aria-label="Main menu">
+        <div class="sidebar-brand">
+          <span
+            class="neuromath-logo neuromath-logo--sidebar"
+            title="∫₀ᴹ — NeuroMath"
+            aria-hidden="true"
+          >
+            <svg viewBox="0 0 72 90" xmlns="http://www.w3.org/2000/svg" focusable="false">
+              <use href="#neuromath-mark" />
+            </svg>
+          </span>
+          <span class="sidebar-brand-text">NeuroMath</span>
+          <button
+            type="button"
+            class="sidebar-close-btn"
+            onclick="toggleSidebar()"
+            aria-label="Close menu"
+          >
+            <span class="material-symbols-outlined" aria-hidden="true">close</span>
+          </button>
+        </div>
+
+        <button
+          type="button"
+          class="sidebar-pin-btn"
+          id="sidebarPinBtn"
+          onclick="toggleSidebarPin()"
+          aria-pressed="false"
+          aria-label="Hide sidebar"
+        >
+          <span class="material-symbols-outlined sidebar-pin-icon" aria-hidden="true">first_page</span>
+          <span class="sidebar-pin-label">Hide sidebar</span>
+        </button>
+
+        <nav class="sidebar-nav" role="navigation" aria-label="Main navigation">
+          <button
+            class="nav-item active"
+            data-page="dashboard"
+            onclick="showPage('dashboard')"
+            id="nav-dashboard"
+          >
+            <span class="material-symbols-outlined nav-icon" aria-hidden="true">dashboard</span>
+            <span class="nav-label">Dashboard</span>
+          </button>
+          <button
+            class="nav-item"
+            data-page="attempts"
+            onclick="showPage('attempts')"
+            id="nav-attempts"
+          >
+            <span class="material-symbols-outlined nav-icon" aria-hidden="true">history_edu</span>
+            <span class="nav-label">Attempt Papers</span>
+          </button>
+          <button
+            class="nav-item"
+            data-page="quiz"
+            onclick="openQuizAndLoad()"
+            id="nav-quiz"
+          >
+            <span class="material-symbols-outlined nav-icon" aria-hidden="true">quiz</span>
+            <span class="nav-label">Quiz</span>
+          </button>
+          <button
+            class="nav-item"
+            data-page="guidance"
+            onclick="showPage('guidance')"
+            id="nav-guidance"
+          >
+            <span class="material-symbols-outlined nav-icon" aria-hidden="true">insights</span>
+            <span class="nav-label">Guidance</span>
+          </button>
+          <button
+            class="nav-item"
+            data-page="practice"
+            onclick="showPage('practice')"
+            id="nav-practice"
+          >
+            <span class="material-symbols-outlined nav-icon" aria-hidden="true">menu_book</span>
+            <span class="nav-label">Practice Quiz</span>
+          </button>
+          <button
+            class="nav-item"
+            data-page="settings"
+            onclick="showPage('settings')"
+            id="nav-settings"
+          >
+            <span class="material-symbols-outlined nav-icon" aria-hidden="true">settings</span>
+            <span class="nav-label">Settings</span>
+          </button>
+        </nav>
+
+        <div class="sidebar-footer">
+          <button class="nav-item signout-btn" onclick="doSignOut()">
+            <span class="material-symbols-outlined nav-icon" aria-hidden="true">logout</span>
+            <span class="nav-label">Sign Out</span>
+          </button>
+        </div>
+      </aside>
+
+      <!-- Content Area -->
+      <div class="content-area">
+        <!-- Top Bar -->
+        <header class="topbar">
+          <button
+            type="button"
+            class="mobile-menu-btn"
+            id="mobileMenuBtn"
+            onclick="toggleSidebar()"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="sidebar"
+          >
+            <span class="material-symbols-outlined menu-icon" id="mobileMenuIcon" aria-hidden="true">menu</span>
+          </button>
+          <h2 class="topbar-title" id="topbarTitle">Dashboard</h2>
+          <div class="user-chip" id="userChip">
+            <div class="avatar" id="userAvatar">?</div>
+            <span class="user-name" id="userName">Student</span>
+          </div>
+        </header>
+
+        <main class="main-content">
+          <!-- Dashboard -->
+          <section id="page-dashboard" class="page active">
+            <div class="welcome-banner glass dashboard-summary-banner">
+              <div class="welcome-text">
+                <h2 id="welcomeHeading">Welcome back!</h2>
+                <p id="welcomeSub" class="welcome-summary-line">
+                  Snapshot of your stats and synaptic activity — use the menu for quizzes and practice.
+                </p>
+              </div>
+              <span class="material-symbols-outlined welcome-decor-icon" aria-hidden="true">monitoring</span>
+            </div>
+
+            <div class="stats-grid">
+              <div class="stat-card glass">
+                <span class="material-symbols-outlined stat-icon" aria-hidden="true">history_edu</span>
+                <div class="stat-info">
+                  <div class="stat-value" id="statAttempts">-</div>
+                  <div class="stat-label">Attempts</div>
+                </div>
+              </div>
+              <div class="stat-card glass">
+                <span class="material-symbols-outlined stat-icon" aria-hidden="true">analytics</span>
+                <div class="stat-info">
+                  <div class="stat-value" id="statAvgScore">-</div>
+                  <div class="stat-label">Avg Score</div>
+                </div>
+              </div>
+              <div class="stat-card glass">
+                <span class="material-symbols-outlined stat-icon" aria-hidden="true">grade</span>
+                <div class="stat-info">
+                  <div class="stat-value" id="statLastScore">-</div>
+                  <div class="stat-label">Last Score</div>
+                </div>
+              </div>
+              <div class="stat-card glass">
+                <span class="material-symbols-outlined stat-icon" aria-hidden="true">track_changes</span>
+                <div class="stat-info">
+                  <div class="stat-value" id="statWeakTopics">-</div>
+                  <div class="stat-label">Focus Areas</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="dashboard-gamification-stack">
+              <div class="glass gamification-brain-card" aria-labelledby="synapseMapHeading">
+                <div class="gamification-brain-head">
+                  <div>
+                    <h3 id="synapseMapHeading" class="synaptic-map-title">
+                      Synaptic practice map
+                      <span class="heading-brain-emoji" aria-hidden="true">🧠</span>
+                    </h3>
+                    <p class="gamification-brain-sub">
+                      An anatomical map of your learning — each practice session fires neurons and
+                      strengthens pathways across the cortex, cerebellum and brainstem.
+                    </p>
+                  </div>
+                  <div class="synapse-stat-pills" id="synapseStatPills" aria-live="polite"></div>
+                </div>
+                <div class="synapse-svg-wrap">
+                  <svg
+                    id="synapseBrainSvg"
+                    class="synapse-brain-svg"
+                    viewBox="0 0 100 92"
+                    preserveAspectRatio="xMidYMid meet"
+                    role="img"
+                    aria-label="Synaptic practice map: brain-shaped network of your quiz activity"
+                  ></svg>
+                </div>
+                <p class="synapse-legend">
+                  <span class="synapse-legend-swatch synapse-legend-swatch--dim"></span> Quiet
+                  <span class="synapse-legend-swatch synapse-legend-swatch--mid"></span> Active
+                  <span class="synapse-legend-swatch synapse-legend-swatch--hot"></span> Strong
+                </p>
+              </div>
+              <div class="glass gamification-badges-card" aria-labelledby="badgesHeading">
+                <div class="gamification-badges-head">
+                  <h3 id="badgesHeading">Achievements</h3>
+                  <p class="badge-progress" id="badgeProgressText">0 / 0 unlocked</p>
+                </div>
+                <div id="achievementBadges" class="achievement-badges"></div>
+              </div>
+            </div>
+          </section>
+
+          <section id="page-attempts" class="page">
+            <div class="attempts-panel glass" id="attemptsPanel">
+              <div class="attempts-head">
+                <h3>Attempt Papers</h3>
+                <p class="page-sub">
+                  Complete review with options, selected answer, correct answer,
+                  and explanation.
+                </p>
+              </div>
+              <div id="attemptsList"></div>
+            </div>
+          </section>
+
+          <!-- Quiz -->
+          <section id="page-quiz" class="page">
+            <div id="quiz-landing" class="">
+              <div class="page-header">
+                <h2>MCQ Quiz</h2>
+                <p class="page-sub">
+                  Load your personalised question paper and test your knowledge.
+                </p>
+              </div>
+              <button class="btn-primary" id="btnLoadQuiz" onclick="loadQuiz()">
+                <span id="btnLoadQuizLabel">Load Quiz Paper</span>
+                <span class="spinner hidden" id="spinLoadQuiz"></span>
+              </button>
+              <div id="quizLoadError" class="inline-error hidden"></div>
+            </div>
+
+            <form id="quizForm" class="hidden" onsubmit="submitQuiz(event)">
+              <div id="quizTimer" class="quiz-timer floating-quiz-timer hidden" aria-live="polite">
+                <span class="material-symbols-outlined" aria-hidden="true">timer</span>
+                <span>Time remaining</span>
+                <strong id="quizTimerValue">00:00</strong>
+              </div>
+              <div class="quiz-progress-bar-wrap">
+                <div class="quiz-progress-bar" id="quizProgressBar"></div>
+              </div>
+              <div class="practice-batch-head glass">
+                <div>
+                  <strong id="diagnosticBatchTitle">Questions 1-5</strong>
+                  <p id="diagnosticBatchHint">Answer all five questions to unlock the next set.</p>
+                </div>
+                <span id="diagnosticBatchCounter" class="practice-batch-counter">Set 1</span>
+              </div>
+              <div id="quizQuestions"></div>
+              <div id="quizSubmitValidation" class="inline-error hidden" role="alert"></div>
+              <div class="practice-batch-actions">
+                <button type="button" class="btn-secondary hidden" id="btnDiagnosticPrevious" onclick="previousDiagnosticBatch()">
+                  Previous 5
+                </button>
+                <button type="button" class="btn-primary" id="btnDiagnosticNext" onclick="nextDiagnosticBatch()">
+                  Next 5
+                </button>
+                <button class="btn-primary hidden" id="btnSubmitQuiz" type="submit">
+                  <span id="btnSubmitLabel">Submit Answers</span>
+                  <span class="spinner hidden" id="spinSubmit"></span>
+                </button>
+              </div>
+            </form>
+
+            <div id="quizResults" class="hidden">
+              <div class="results-header glass">
+                <div class="score-ring-wrap">
+                  <svg
+                    class="score-ring"
+                    viewBox="0 0 120 120"
+                    aria-hidden="true"
+                  >
+                    <circle class="ring-bg" cx="60" cy="60" r="50" />
+                    <circle
+                      class="ring-fill"
+                      id="scoreRingFill"
+                      cx="60"
+                      cy="60"
+                      r="50"
+                      stroke-dasharray="0 314"
+                    />
+                  </svg>
+                  <div class="score-ring-text">
+                    <span class="score-pct" id="scorePct">0%</span>
+                    <span class="score-sub" id="scoreSubText">0/0</span>
+                  </div>
+                </div>
+                <div class="results-meta">
+                  <h2 id="resultHeading">Quiz Complete</h2>
+                  <p id="resultSubHeading">Here's your breakdown</p>
+                  <button class="btn-secondary" onclick="resetQuiz()">
+                    Try Again
+                  </button>
+                </div>
+              </div>
+              <div id="reviewList"></div>
+            </div>
+          </section>
+
+          <!-- Guidance -->
+          <section id="page-guidance" class="page">
+            <div class="page-header">
+              <h2>Study Guidance</h2>
+              <p class="page-sub">
+                Personalised recommendations based on your performance.
+              </p>
+            </div>
+            <div class="guidance-controls">
+              <label for="guidanceAttemptSelect" class="field-label"
+                >Attempt</label
+              >
+              <select
+                id="guidanceAttemptSelect"
+                class="field-input"
+                onchange="loadGuidance()"
+              ></select>
+            </div>
+            <button
+              class="btn-primary"
+              id="btnGuidance"
+              onclick="loadGuidance()"
+            >
+              <span id="btnGuidanceLabel">Load Guidance</span>
+              <span class="spinner hidden" id="spinGuidance"></span>
+            </button>
+            <div id="guidanceContent" class="hidden">
+              <div class="guidance-grid">
+                <div class="glass guidance-card" id="guidanceTrend">
+                  <h3>Score Trend</h3>
+                  <canvas id="trendCanvas" height="100"></canvas>
+                  <p class="trend-label" id="trendLabel"></p>
+                </div>
+                <div class="glass guidance-card" id="guidanceWeakTopics">
+                  <h3>Focus Areas</h3>
+                  <p class="card-hint">
+                    Topics with the most incorrect answers in this attempt.
+                  </p>
+                  <ul id="weakTopicsList" class="topic-list"></ul>
+                </div>
+              </div>
+              <div class="glass guidance-card guidance-notes-card">
+                <h3>Recommendations</h3>
+                <p class="card-hint">
+                  Summary and concrete practice targets (grades / chapters).
+                </p>
+                <div id="guidanceSummary" class="guidance-summary"></div>
+                <ul id="guidanceNotesList" class="notes-list"></ul>
+              </div>
+            </div>
+            <div id="guidanceError" class="inline-error hidden"></div>
+          </section>
+
+          <section id="page-practice" class="page">
+            <div id="practiceCatalogView">
+              <div class="page-header">
+                <h2>Practice Quiz</h2>
+                <p class="page-sub">
+                  Select a topic tab, then click a grade-level subtopic to start a
+                  focused quiz.
+                </p>
+              </div>
+              <div class="practice-tabs-wrap glass">
+                <div id="practiceTopicTabs" class="practice-topic-tabs"></div>
+                <div id="practiceTopicPanel" class="practice-topic-panel"></div>
+              </div>
+              <div id="practiceQuizLoadError" class="inline-error hidden"></div>
+              <div id="practiceQuizHint" class="glass practice-hint-banner">
+                Choose a subtopic above to start a practice quiz.
+              </div>
+              <div id="practiceError" class="inline-error hidden"></div>
+            </div>
+
+            <div id="practiceQuizPage" class="hidden">
+              <div class="practice-quiz-page-head">
+                <button type="button" class="btn-secondary" id="btnBackPracticeTopics" onclick="backToPracticeTopics()">
+                  <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>
+                  Back to Topics
+                </button>
+                <div>
+                  <h2 id="practiceQuizPageTitle">Practice Quiz</h2>
+                  <p id="practiceQuizPageSubtitle" class="page-sub"></p>
+                </div>
+              </div>
+
+              <form
+                id="practiceQuizForm"
+                class="hidden"
+                onsubmit="submitPracticeQuiz(event)"
+              >
+                <div id="practiceQuizTimer" class="quiz-timer floating-quiz-timer hidden" aria-live="polite">
+                  <span class="material-symbols-outlined" aria-hidden="true">timer</span>
+                  <span>Time remaining</span>
+                  <strong id="practiceQuizTimerValue">00:00</strong>
+                </div>
+                <div class="quiz-progress-bar-wrap">
+                  <div
+                    class="quiz-progress-bar"
+                    id="practiceQuizProgressBar"
+                  ></div>
+                </div>
+                <div class="practice-batch-head glass">
+                  <div>
+                    <strong id="practiceBatchTitle">Questions 1-5</strong>
+                    <p id="practiceBatchHint">Answer all five questions to unlock the next set.</p>
+                  </div>
+                  <span id="practiceBatchCounter" class="practice-batch-counter">Set 1 of 2</span>
+                </div>
+                <div id="practiceQuizQuestions"></div>
+                <div id="practiceSubmitValidation" class="inline-error hidden" role="alert"></div>
+                <div class="practice-batch-actions">
+                  <button type="button" class="btn-secondary hidden" id="btnPracticePrevious" onclick="previousPracticeBatch()">
+                    Previous 5
+                  </button>
+                  <button type="button" class="btn-primary" id="btnPracticeNext" onclick="nextPracticeBatch()">
+                    Next 5
+                  </button>
+                  <button
+                    class="btn-primary hidden"
+                    id="btnSubmitPractice"
+                    type="submit"
+                  >
+                    <span id="btnSubmitPracticeLabel">Submit Practice Answers</span>
+                    <span class="spinner hidden" id="spinSubmitPractice"></span>
+                  </button>
+                </div>
+              </form>
+              <div id="practiceQuizResults" class="hidden">
+                <div class="results-header glass">
+                  <div class="results-meta">
+                    <h2 id="practiceResultHeading">Practice Complete</h2>
+                    <p id="practiceResultSubHeading">
+                      Here is your practice breakdown
+                    </p>
+                    <p
+                      id="practiceScoreText"
+                      style="
+                        margin-top: 0.35rem;
+                        color: var(--ink2);
+                        font-weight: 600;
+                      "
+                    >
+                      Score: 0% (0/0)
+                    </p>
+                    <button class="btn-secondary" onclick="resetPracticeQuiz()">
+                      Try Another Subtopic
+                    </button>
+                  </div>
+                </div>
+                <div id="practiceReviewList"></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Settings -->
+          <section id="page-settings" class="page">
+            <div class="page-header">
+              <h2>Settings</h2>
+              <p class="page-sub">Customise your experience.</p>
+            </div>
+
+            <div class="settings-grid">
+              <div class="glass settings-card">
+                <h3>Profile</h3>
+                <div class="field-group">
+                  <label class="field-label" for="settingsName"
+                    >Display Name</label
+                  >
+                  <input
+                    class="field-input"
+                    id="settingsName"
+                    type="text"
+                    placeholder="Your name"
+                  />
+                </div>
+                <button
+                  class="btn-primary"
+                  id="btnSaveName"
+                  onclick="saveName()"
+                >
+                  Save Name
+                </button>
+                <div id="nameStatus" class="inline-ok hidden">Saved</div>
+              </div>
+
+              <div class="glass settings-card">
+                <h3>Appearance</h3>
+                <div class="field-group">
+                  <label class="field-label">Theme</label>
+                  <div class="toggle-row">
+                    <span>Light</span>
+                    <label class="toggle-switch" for="themeToggle">
+                      <input
+                        type="checkbox"
+                        id="themeToggle"
+                        onchange="toggleTheme(this)"
+                      />
+                      <span class="toggle-track"></span>
+                    </label>
+                    <span>Dark</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="glass settings-card">
+                <h3>Quiz Preferences</h3>
+                <div class="field-group">
+                  <label class="field-label" for="difficultySelect"
+                    >Difficulty Hint</label
+                  >
+                  <select class="field-input" id="difficultySelect">
+                    <option value="easy">Easy</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="hard">Hard</option>
+                  </select>
+                </div>
+                <div class="field-group">
+                  <label class="field-label">Quiz Timer</label>
+                  <div class="toggle-row">
+                    <span>Disabled</span>
+                    <label class="toggle-switch" for="quizTimerToggle">
+                      <input type="checkbox" id="quizTimerToggle" checked />
+                      <span class="toggle-track"></span>
+                    </label>
+                    <span>Enabled</span>
+                  </div>
+                  <p class="field-help">
+                    When enabled, diagnostic quizzes use a fixed time limit and
+                    practice quizzes use a topic-based time limit.
+                  </p>
+                </div>
+                <button
+                  class="btn-primary"
+                  id="btnSaveSettings"
+                  onclick="saveSettings()"
+                >
+                  Save Preferences
+                </button>
+                <div id="settingsStatus" class="inline-ok hidden">Saved</div>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+      <!-- end content-area -->
+    </div>
+    <!-- end #app -->
+
+    <div
+      id="practiceLoadingOverlay"
+      class="practice-loading-overlay hidden"
+      aria-live="polite"
+      aria-busy="true"
+    >
+      <div class="practice-loading-card glass">
+        <span class="practice-loading-spinner" aria-hidden="true"></span>
+        <p id="practiceLoadingText">Loading questions...</p>
+      </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
