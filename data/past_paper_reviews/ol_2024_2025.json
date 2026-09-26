@@ -1,0 +1,865 @@
+{
+  "review_version": "ol-2024-2025-v1",
+  "reviewed_at": "2026-09-16T00:00:00+00:00",
+  "reviewed_by": "NeuroMath AI-assisted code and mathematics audit",
+  "source_verification": "dataset_text_only",
+  "records": {
+    "OL_2024_2025_MATH_II_A_01": {
+      "source_dataset": "OL_2024_2025_Mathematics_Paper_II_Complete.json",
+      "source_sha256": "cbce92d5cdfd291c7eb8a106c291e266d38f4d89062e4bd5550452e0bb55140c",
+      "status": "accepted",
+      "reason": "Simple interest is accepted. Hire purchase is held: the stem says equal total instalments, but the 24% solution uses equal principal repayments. Verify the repayment convention against the original paper.",
+      "records": [
+        {
+          "suffix": "simple_interest",
+          "grade": 10,
+          "concept_id": "g10_t2_13_percentages",
+          "concept_name": "Percentages",
+          "question": "Ruvini borrows Rs. 84000 for one year at simple interest. She pays Rs. 10920 in interest when settling the loan. What annual percentage interest rate was charged?",
+          "answer": "13%",
+          "solution": "10920 / 84000 * 100 = 13%.",
+          "mapping_evidence": "Use interest, principal and time to determine a simple annual percentage rate.",
+          "answer_review_evidence": "10920 / 84000 * 100 = 13%.",
+          "correction": ""
+        }
+      ]
+    },
+    "OL_2024_2025_MATH_II_A_02": {
+      "source_dataset": "OL_2024_2025_Mathematics_Paper_II_Complete.json",
+      "source_sha256": "0bcbcdc4151e3111c6fbceb60f14455339478d01644a27eb6baecfe6888e4071",
+      "status": "accepted",
+      "reason": "Five algebraic/graph interpretation tasks are accepted. The draw-the-graph task (ii) is retained in the source but not converted to a text-only MCQ.",
+      "records": [
+        {
+          "suffix": "i",
+          "grade": 11,
+          "concept_id": "g11_t2_12_graphs",
+          "concept_name": "Graphs",
+          "question": "A quadratic function has x-values -2, -1, 0, 1, 2, 3, 4 and corresponding y-values -5, 0, 3, 4, an unknown value, 0, -5. Find the missing y-value at x = 2.",
+          "answer": "3",
+          "solution": "The axis of symmetry is x = 1, so y(2) = y(0) = 3.",
+          "mapping_evidence": "Interpret a quadratic graph using its roots, symmetry, and horizontal-line intersections.",
+          "answer_review_evidence": "The axis of symmetry is x = 1, so y(2) = y(0) = 3.",
+          "correction": ""
+        },
+        {
+          "suffix": "iii_a",
+          "grade": 11,
+          "concept_id": "g11_t2_12_graphs",
+          "concept_name": "Graphs",
+          "question": "A quadratic function has x-values -2, -1, 0, 1, 2, 3, 4 and corresponding y-values -5, 0, 3, 4, an unknown value, 0, -5. Find the two points where the graph intersects the x-axis.",
+          "answer": "(-1, 0) and (3, 0)",
+          "solution": "The y-values are zero at x = -1 and x = 3.",
+          "mapping_evidence": "Interpret a quadratic graph using its roots, symmetry, and horizontal-line intersections.",
+          "answer_review_evidence": "The y-values are zero at x = -1 and x = 3.",
+          "correction": ""
+        },
+        {
+          "suffix": "iii_b",
+          "grade": 11,
+          "concept_id": "g11_t2_12_graphs",
+          "concept_name": "Graphs",
+          "question": "A quadratic function has x-values -2, -1, 0, 1, 2, 3, 4 and corresponding y-values -5, 0, 3, 4, an unknown value, 0, -5. Express the function in factored form.",
+          "answer": "y = -(x + 1)(x - 3)",
+          "solution": "The roots are -1 and 3. At x = 0 the value is 3, so the leading coefficient is -1.",
+          "mapping_evidence": "Interpret a quadratic graph using its roots, symmetry, and horizontal-line intersections.",
+          "answer_review_evidence": "The roots are -1 and 3. At x = 0 the value is 3, so the leading coefficient is -1.",
+          "correction": ""
+        },
+        {
+          "suffix": "iv_a",
+          "grade": 11,
+          "concept_id": "g11_t2_12_graphs",
+          "concept_name": "Graphs",
+          "question": "A quadratic function has x-values -2, -1, 0, 1, 2, 3, 4 and corresponding y-values -5, 0, 3, 4, an unknown value, 0, -5. Find the exact interval of x for which y > 1.",
+          "answer": "1 - sqrt(3) < x < 1 + sqrt(3)",
+          "solution": "The function is y = 4 - (x - 1)^2. Thus y > 1 means (x - 1)^2 < 3.",
+          "mapping_evidence": "Interpret a quadratic graph using its roots, symmetry, and horizontal-line intersections.",
+          "answer_review_evidence": "The function is y = 4 - (x - 1)^2. Thus y > 1 means (x - 1)^2 < 3.",
+          "correction": ""
+        },
+        {
+          "suffix": "iv_b",
+          "grade": 11,
+          "concept_id": "g11_t2_12_graphs",
+          "concept_name": "Graphs",
+          "question": "A quadratic function has x-values -2, -1, 0, 1, 2, 3, 4 and corresponding y-values -5, 0, 3, 4, an unknown value, 0, -5. The line y = 1 meets the graph at A and B. Calculate the distance AB to one decimal place.",
+          "answer": "3.5 units",
+          "solution": "The equation 4 - (x - 1)^2 = 1 gives x = 1 +/- sqrt(3). Therefore AB = 2*sqrt(3) = 3.4641..., which rounds to 3.5 units.",
+          "mapping_evidence": "Interpret a quadratic graph using its roots, symmetry, and horizontal-line intersections.",
+          "answer_review_evidence": "The equation 4 - (x - 1)^2 = 1 gives x = 1 +/- sqrt(3). Therefore AB = 2*sqrt(3) = 3.4641..., which rounds to 3.5 units.",
+          "correction": "Use exact roots before rounding; the supplied 3.4 arises from subtracting prematurely rounded endpoints."
+        }
+      ]
+    },
+    "OL_2024_2025_MATH_II_A_03": {
+      "source_dataset": "OL_2024_2025_Mathematics_Paper_II_Complete.json",
+      "source_sha256": "e50f3d4cd9e6fbb44df775b66e41ced02a812f0863f5ecd938f6f91525edcd17",
+      "status": "held",
+      "reason": "The required diagram was not included in the dataset; verify against the original question paper before use.",
+      "records": []
+    },
+    "OL_2024_2025_MATH_II_A_04": {
+      "source_dataset": "OL_2024_2025_Mathematics_Paper_II_Complete.json",
+      "source_sha256": "b2322e1af410559f6f1b857392457088b0498722ce1238bd1410da1498d64126",
+      "status": "accepted",
+      "reason": "The quadratic part is accepted. The longest-side comparison is not imported because the supplied answer mixes the rounded x with a calculated length; keep it for source review.",
+      "records": [
+        {
+          "suffix": "i",
+          "grade": 11,
+          "concept_id": "g11_t2_13_equations",
+          "concept_name": "Equations",
+          "question": "The top of a birthday cake is in the shape of a right angled isosceles triangle. Its two equal sides are of length 2x cm each. the words 'HAPPY BIRTHDAY' are written on a rectangular piece of white icing of length (x + 2) cm and breadth (x − 4) cm. The remaining portion is decorated in pink and is of area 132 cm². Calculate x to the nearest whole centimetre, using sqrt(5) = 2.24.",
+          "answer": "10 cm",
+          "solution": "The triangle area is 2x^2 and the rectangle area is x^2-2x-8. Their difference is 132, so x^2+2x-124=0. The positive root is -1+5*sqrt(5)=10.2, which rounds to 10 cm.",
+          "mapping_evidence": "Model an area difference with a quadratic equation and select its positive root.",
+          "answer_review_evidence": "The triangle area is 2x^2 and the rectangle area is x^2-2x-8. Their difference is 132, so x^2+2x-124=0. The positive root is -1+5*sqrt(5)=10.2, which rounds to 10 cm.",
+          "correction": ""
+        }
+      ]
+    },
+    "OL_2024_2025_MATH_II_A_05": {
+      "source_dataset": "OL_2024_2025_Mathematics_Paper_II_Complete.json",
+      "source_sha256": "f0dd77b0d58b55f7d1e01c793fa35f1942d65654aa18b882c2efa8719ab2f10b",
+      "status": "accepted",
+      "reason": "Selected self-contained tasks were checked against the supplied text and existing concept catalog.",
+      "records": [
+        {
+          "suffix": "i",
+          "grade": 10,
+          "concept_id": "g10_t2_14_equations",
+          "concept_name": "Equations",
+          "question": "Packs of 10 small plates each and packs of 5 large plates each were bought to serve sweetmeats to the adults and children who attended a party. The price of a pack of small plates was 150 rupees and the price of a pack of large plates was 120 rupees. The total number of plates that were bought was 200 and the total cost of these plates was 3720 rupees. Find the numbers of small-plate packs and large-plate packs, in that order.",
+          "answer": "12 and 16",
+          "solution": "10x+5y=200 and 150x+120y=3720. Subtracting 15 times the first from the second gives 45y=720, so y=16 and x=12.",
+          "mapping_evidence": "Form and solve two simultaneous linear equations from quantities and prices.",
+          "answer_review_evidence": "10x+5y=200 and 150x+120y=3720. Subtracting 15 times the first from the second gives 45y=720, so y=16 and x=12.",
+          "correction": ""
+        },
+        {
+          "suffix": "ii",
+          "grade": 10,
+          "concept_id": "g10_t2_14_equations",
+          "concept_name": "Equations",
+          "question": "Packs of 10 small plates each and packs of 5 large plates each were bought to serve sweetmeats to the adults and children who attended a party. The price of a pack of small plates was 150 rupees and the price of a pack of large plates was 120 rupees. The total number of plates that were bought was 200 and the total cost of these plates was 3720 rupees. Each large plate holds two more sweetmeats than a small plate. In total 1160 sweetmeats are served. Find the number on each small plate.",
+          "answer": "5",
+          "solution": "The two pack equations give 12 packs of 10 small plates and 16 packs of 5 large plates. With n sweets per small plate, 120n+80(n+2)=1160; n=5.",
+          "mapping_evidence": "Use simultaneous equations to obtain quantities, followed by a linear equation for the requested count.",
+          "answer_review_evidence": "The two pack equations give 12 packs of 10 small plates and 16 packs of 5 large plates. With n sweets per small plate, 120n+80(n+2)=1160; n=5.",
+          "correction": ""
+        }
+      ]
+    },
+    "OL_2024_2025_MATH_II_A_06": {
+      "source_dataset": "OL_2024_2025_Mathematics_Paper_II_Complete.json",
+      "source_sha256": "01372088a4479372368b3671db5a9a29be6c1e5072d2d06c3333874aaf33b98a",
+      "status": "accepted",
+      "reason": "Selected self-contained tasks were checked against the supplied text and existing concept catalog.",
+      "records": [
+        {
+          "suffix": "i",
+          "grade": 11,
+          "concept_id": "g11_t2_15_data_representation_and_prediction",
+          "concept_name": "Data representation and prediction",
+          "question": "The frequency table given below provides information related to the number of hires a certain three-wheeler engaged in each week. Number of hires: 5–9, 10–14, 15–19, 20–24, 25–29, 30–34, 35–39. Number of weeks: 1, 3, 4, 6, 5, 7, 4. Use class midpoints to estimate the mean weekly number of hires.",
+          "answer": "25",
+          "solution": "Midpoints 7,12,17,22,27,32,37 with frequencies 1,3,4,6,5,7,4 give sum(f)=30 and sum(fx)=750. Estimated mean = 750/30 = 25.",
+          "mapping_evidence": "Interpret a grouped frequency table and compute or apply weighted estimates or class-bound counts.",
+          "answer_review_evidence": "Midpoints 7,12,17,22,27,32,37 with frequencies 1,3,4,6,5,7,4 give sum(f)=30 and sum(fx)=750. Estimated mean = 750/30 = 25.",
+          "correction": ""
+        },
+        {
+          "suffix": "ii",
+          "grade": 11,
+          "concept_id": "g11_t2_15_data_representation_and_prediction",
+          "concept_name": "Data representation and prediction",
+          "question": "The frequency table given below provides information related to the number of hires a certain three-wheeler engaged in each week. Number of hires: 5–9, 10–14, 15–19, 20–24, 25–29, 30–34, 35–39. Number of weeks: 1, 3, 4, 6, 5, 7, 4. Using the grouped-data mean, estimate the total number of hires in 52 weeks.",
+          "answer": "1300",
+          "solution": "The midpoint-weighted mean is 750/30 = 25 hires per week. In 52 weeks the estimate is 25*52 = 1300.",
+          "mapping_evidence": "Interpret a grouped frequency table and compute or apply weighted estimates or class-bound counts.",
+          "answer_review_evidence": "The midpoint-weighted mean is 750/30 = 25 hires per week. In 52 weeks the estimate is 25*52 = 1300.",
+          "correction": ""
+        },
+        {
+          "suffix": "iii",
+          "grade": 11,
+          "concept_id": "g11_t2_15_data_representation_and_prediction",
+          "concept_name": "Data representation and prediction",
+          "question": "The frequency table given below provides information related to the number of hires a certain three-wheeler engaged in each week. Number of hires: 5–9, 10–14, 15–19, 20–24, 25–29, 30–34, 35–39. Number of weeks: 1, 3, 4, 6, 5, 7, 4. Each hire averages 5 km and the fare is Rs. 100 per km. Estimate the income for four weeks using the grouped-data mean.",
+          "answer": "Rs. 50000",
+          "solution": "The estimated mean is 750/30 = 25 hires/week. Four weeks of hires earn 4*25*5*100 = Rs. 50000.",
+          "mapping_evidence": "Interpret a grouped frequency table and compute or apply weighted estimates or class-bound counts.",
+          "answer_review_evidence": "The estimated mean is 750/30 = 25 hires/week. Four weeks of hires earn 4*25*5*100 = Rs. 50000.",
+          "correction": ""
+        },
+        {
+          "suffix": "iv",
+          "grade": 11,
+          "concept_id": "g11_t2_15_data_representation_and_prediction",
+          "concept_name": "Data representation and prediction",
+          "question": "The frequency table given below provides information related to the number of hires a certain three-wheeler engaged in each week. Number of hires: 5–9, 10–14, 15–19, 20–24, 25–29, 30–34, 35–39. Number of weeks: 1, 3, 4, 6, 5, 7, 4. Find the minimum possible total number of hires in the weeks with fewer than 20 hires.",
+          "answer": "95",
+          "solution": "For classes below 20 use the lower integer limits: 1*5 + 3*10 + 4*15 = 95.",
+          "mapping_evidence": "Interpret a grouped frequency table and compute or apply weighted estimates or class-bound counts.",
+          "answer_review_evidence": "For classes below 20 use the lower integer limits: 1*5 + 3*10 + 4*15 = 95.",
+          "correction": ""
+        }
+      ]
+    },
+    "OL_2024_2025_MATH_II_B_07": {
+      "source_dataset": "OL_2024_2025_Mathematics_Paper_II_Complete.json",
+      "source_sha256": "b68cc3886425230a447c919e96decb346541e569527ea78f622d51814322f6e3",
+      "status": "held",
+      "reason": "The required diagram was not included in the dataset; verify against the original question paper before use.",
+      "records": []
+    },
+    "OL_2024_2025_MATH_II_B_08": {
+      "source_dataset": "OL_2024_2025_Mathematics_Paper_II_Complete.json",
+      "source_sha256": "3545e0ae2e1698cb7c5aa9f0312ab9cae70e1d42404a1de90899909eec898b94",
+      "status": "accepted",
+      "reason": "All points needed for the ratio are defined in text; part (iv) is accepted as a self-contained application. The preceding proof tasks are not converted.",
+      "records": [
+        {
+          "suffix": "iv",
+          "grade": 11,
+          "concept_id": "g11_t2_14_equiangular_triangles",
+          "concept_name": "Equiangular triangles",
+          "question": "ABCD is a parallelogram. E is the midpoint of BC and F is a point on DC such that DF = 1/3 DC. Here, the line AB produced meets the line FE produced at G and the line AD produced meets the line EF produced at H. Find DH/AD.",
+          "answer": "1/4",
+          "solution": "By parallel lines, triangles BGE and CFE are congruent, so BG=CF=2DC/3 and BE=BC/2. Triangles DFH and BGE are similar; DH/BE=DF/BG=1/2. Thus DH=BC/4=AD/4.",
+          "mapping_evidence": "Use congruence to determine a length and then corresponding-side ratios of equiangular triangles.",
+          "answer_review_evidence": "By parallel lines, triangles BGE and CFE are congruent, so BG=CF=2DC/3 and BE=BC/2. Triangles DFH and BGE are similar; DH/BE=DF/BG=1/2. Thus DH=BC/4=AD/4.",
+          "correction": ""
+        }
+      ]
+    },
+    "OL_2024_2025_MATH_II_B_09": {
+      "source_dataset": "OL_2024_2025_Mathematics_Paper_II_Complete.json",
+      "source_sha256": "d16738add57fea26f773561e07be4a0705b0f9190d708a6dc2e7d70441f1c591",
+      "status": "accepted",
+      "reason": "Selected self-contained tasks were checked against the supplied text and existing concept catalog.",
+      "records": [
+        {
+          "suffix": "relation",
+          "grade": 11,
+          "concept_id": "g11_t1_05_volume_of_solids",
+          "concept_name": "Volume of solids",
+          "question": "Nine small solid metal right pyramids, each with a square base of side length a, and height 2a, are melted and a solid right circular cylinder of base radius r and height 3r is made without any wastage of metal. Express a^3 in terms of r.",
+          "answer": "pi*r^3/2",
+          "solution": "Nine pyramids have volume 9*(a^2*2a/3)=6a^3. The cylinder volume is pi*r^2*3r=3*pi*r^3. Equating gives a^3=pi*r^3/2.",
+          "mapping_evidence": "Use conservation of volume when melting solids and the volume formula for a pyramid.",
+          "answer_review_evidence": "Nine pyramids have volume 9*(a^2*2a/3)=6a^3. The cylinder volume is pi*r^2*3r=3*pi*r^3. Equating gives a^3=pi*r^3/2.",
+          "correction": ""
+        },
+        {
+          "suffix": "side_length",
+          "grade": 11,
+          "concept_id": "g11_t1_05_volume_of_solids",
+          "concept_name": "Volume of solids",
+          "question": "Nine small solid metal right pyramids, each with a square base of side length a, and height 2a, are melted and a solid right circular cylinder of base radius r and height 3r is made without any wastage of metal. If r=1.725 cm and pi=3.14, calculate a to the nearest whole centimetre.",
+          "answer": "2 cm",
+          "solution": "Equating volumes gives a^3=3.14*1.725^3/2=8.05873640625. Its cube root is approximately 2.005, so a rounds to 2 cm.",
+          "mapping_evidence": "Use conservation of volume when melting solids and the volume formula for a pyramid.",
+          "answer_review_evidence": "Equating volumes gives a^3=3.14*1.725^3/2=8.05873640625. Its cube root is approximately 2.005, so a rounds to 2 cm.",
+          "correction": "Recalculated the intermediate value using the supplied pi and radius; the rounded side length remains 2 cm."
+        },
+        {
+          "suffix": "remaining_volume",
+          "grade": 11,
+          "concept_id": "g11_t1_05_volume_of_solids",
+          "concept_name": "Volume of solids",
+          "question": "Nine small solid metal right pyramids, each with a square base of side length a, and height 2a, are melted and a solid right circular cylinder of base radius r and height 3r is made without any wastage of metal. Use a=2 cm, the side length rounded to the nearest whole centimetre. One such pyramid is removed from a cuboid of dimensions a, a and 2a. Find the remaining volume.",
+          "answer": "32/3 cm^3",
+          "solution": "The cuboid volume is 2a^3=16. The removed pyramid has volume 2a^3/3=16/3. The remaining volume is 16-16/3=32/3 cm^3.",
+          "mapping_evidence": "Use conservation of volume when melting solids and the volume formula for a pyramid.",
+          "answer_review_evidence": "The cuboid volume is 2a^3=16. The removed pyramid has volume 2a^3/3=16/3. The remaining volume is 16-16/3=32/3 cm^3.",
+          "correction": ""
+        }
+      ]
+    },
+    "OL_2024_2025_MATH_II_B_10": {
+      "source_dataset": "OL_2024_2025_Mathematics_Paper_II_Complete.json",
+      "source_sha256": "e28013f0454e774845e8e2b0aab5fb54b306553d539ea1d97cc892a3c9828eae",
+      "status": "accepted",
+      "reason": "Parts (ii)-(v) are accepted; part (i), which only lists the first three terms, is not a separate generation source.",
+      "records": [
+        {
+          "suffix": "ii",
+          "grade": 10,
+          "concept_id": "g10_t3_23_arithmetic_progressions",
+          "concept_name": "Arithmetic Progressions",
+          "question": "Amala and Sumana decide to read a certain novel during the holidays. Amala reads 20 pages on the first day and on each day thereafter she reads three pages more than the previous day. Find the number of pages Amala reads on the 16th day.",
+          "answer": "65",
+          "solution": "The arithmetic progression has first term 20 and difference 3. Term 16 is 20+15*3=65.",
+          "mapping_evidence": "Use the nth-term or finite-sum formula for arithmetic progressions in a reading schedule.",
+          "answer_review_evidence": "The arithmetic progression has first term 20 and difference 3. Term 16 is 20+15*3=65.",
+          "correction": ""
+        },
+        {
+          "suffix": "iii",
+          "grade": 10,
+          "concept_id": "g10_t3_23_arithmetic_progressions",
+          "concept_name": "Arithmetic Progressions",
+          "question": "Amala and Sumana decide to read a certain novel during the holidays. Amala reads 20 pages on the first day and on each day thereafter she reads three pages more than the previous day. If Amala finishes the book on day 16, how many pages does it contain?",
+          "answer": "680",
+          "solution": "Sum of 16 terms is 16/2*(2*20+15*3)=680.",
+          "mapping_evidence": "Use the nth-term or finite-sum formula for arithmetic progressions in a reading schedule.",
+          "answer_review_evidence": "Sum of 16 terms is 16/2*(2*20+15*3)=680.",
+          "correction": ""
+        },
+        {
+          "suffix": "iv",
+          "grade": 10,
+          "concept_id": "g10_t3_23_arithmetic_progressions",
+          "concept_name": "Arithmetic Progressions",
+          "question": "Amala and Sumana decide to read a certain novel during the holidays. Amala reads 20 pages on the first day and on each day thereafter she reads three pages more than the previous day. Amala finishes on day 16. Sumana reads the same book in 17 days, reading four more pages each day than on the previous day. Find Sumana's first-day page count.",
+          "answer": "8",
+          "solution": "The book has 680 pages. With first term b, 17/2*(2b+16*4)=680. Thus b=8.",
+          "mapping_evidence": "Use the nth-term or finite-sum formula for arithmetic progressions in a reading schedule.",
+          "answer_review_evidence": "The book has 680 pages. With first term b, 17/2*(2b+16*4)=680. Thus b=8.",
+          "correction": ""
+        },
+        {
+          "suffix": "v",
+          "grade": 10,
+          "concept_id": "g10_t3_23_arithmetic_progressions",
+          "concept_name": "Arithmetic Progressions",
+          "question": "Amala and Sumana decide to read a certain novel during the holidays. Amala reads 20 pages on the first day and on each day thereafter she reads three pages more than the previous day. Amala finishes on day 16. Sumana finishes the same book in 17 days, increasing her daily count by four pages each day. If they start together, on which day do their daily page counts agree?",
+          "answer": "13",
+          "solution": "The book has 680 pages, giving Sumana a first term of 8. Set 20+3(n-1)=8+4(n-1) to obtain n=13.",
+          "mapping_evidence": "Use the nth-term or finite-sum formula for arithmetic progressions in a reading schedule.",
+          "answer_review_evidence": "The book has 680 pages, giving Sumana a first term of 8. Set 20+3(n-1)=8+4(n-1) to obtain n=13.",
+          "correction": ""
+        }
+      ]
+    },
+    "OL_2024_2025_MATH_II_B_11": {
+      "source_dataset": "OL_2024_2025_Mathematics_Paper_II_Complete.json",
+      "source_sha256": "1159f37ff28b3e05e52e15ad57fa4fa75a16113f29d78cc9420c23a533fe1173",
+      "status": "held",
+      "reason": "Diagram not supplied and the final answer incorrectly equates angle DAC with DCA. The angle equalities and diagram orientation need original-source review.",
+      "records": []
+    },
+    "OL_2024_2025_MATH_II_B_12": {
+      "source_dataset": "OL_2024_2025_Mathematics_Paper_II_Complete.json",
+      "source_sha256": "d01c677e8fddf684f0a340f035fb2ad3f3e4a4c100565633533e44b58ea16e0c",
+      "status": "held",
+      "reason": "Missing Venn diagram. The text alone does not imply that 100-60-14 counts exactly-one-item buyers, so the numeric answers are not justified.",
+      "records": []
+    },
+    "OL_2024_2025_MATH_A_01": {
+      "source_dataset": "OL_2024_2025_Mathematics_Part_A_Test.json",
+      "source_sha256": "98aa588c791d7829877ad521c709a573bfddf8e9bde96a90f57ce5e2ca7f747d",
+      "status": "accepted",
+      "reason": "Selected self-contained tasks were checked against the supplied text and existing concept catalog.",
+      "records": [
+        {
+          "suffix": "",
+          "grade": 10,
+          "concept_id": "g10_t1_09_inverse_proportion",
+          "concept_name": "Inverse Proportion",
+          "question": "It is estimated that six men will take eight days to paint the walls of a house. If it is required to complete this task in three days, how many more men need to be engaged?",
+          "answer": "10 men",
+          "solution": "Amount of work = 6 × 8 = 48 man-days. Men required for 3 days = 48 ÷ 3 = 16. More men required = 16 − 6 = 10.",
+          "mapping_evidence": "Fixed work in man-days requires inverse proportionality between workers and time; asking for additional workers adds a second step.",
+          "answer_review_evidence": "Amount of work = 6 × 8 = 48 man-days. Men required for 3 days = 48 ÷ 3 = 16. More men required = 16 − 6 = 10.",
+          "correction": ""
+        }
+      ]
+    },
+    "OL_2024_2025_MATH_A_02": {
+      "source_dataset": "OL_2024_2025_Mathematics_Part_A_Test.json",
+      "source_sha256": "385339da40179d6b7a0e5f9facaad91dbc9b918c2a0d691b22e37bdda606a055",
+      "status": "held",
+      "reason": "The required diagram was not included in the dataset; verify against the original question paper before use.",
+      "records": []
+    },
+    "OL_2024_2025_MATH_A_03": {
+      "source_dataset": "OL_2024_2025_Mathematics_Part_A_Test.json",
+      "source_sha256": "09cf206e0e73a4a64277d2c16aeae75c5ce7e2290183269e35c66050f399e3dc",
+      "status": "accepted",
+      "reason": "Selected self-contained tasks were checked against the supplied text and existing concept catalog.",
+      "records": [
+        {
+          "suffix": "",
+          "grade": 10,
+          "concept_id": "g10_t2_12_algebraic_fractions",
+          "concept_name": "Algebraic Fractions",
+          "question": "For x != 0, simplify 2/(3x) + 5/(6x) - 7/(12x).",
+          "answer": "11/(12x)",
+          "solution": "Using denominator 12x: 2/(3x) + 5/(6x) − 7/(12x) = 8/(12x) + 10/(12x) − 7/(12x) = 11/(12x).",
+          "mapping_evidence": "Addition and subtraction of algebraic fractions require the common denominator 12x.",
+          "answer_review_evidence": "Using denominator 12x: 2/(3x) + 5/(6x) − 7/(12x) = 8/(12x) + 10/(12x) − 7/(12x) = 11/(12x).",
+          "correction": ""
+        }
+      ]
+    },
+    "OL_2024_2025_MATH_A_04": {
+      "source_dataset": "OL_2024_2025_Mathematics_Part_A_Test.json",
+      "source_sha256": "76fcd2e622ce9e03d1331aa78a88f5f2ef9990ae30c88785050a7ce901aaba52",
+      "status": "held",
+      "reason": "The listed rhombus category includes squares unless it is qualified as non-square; no working is supplied. Clarify the intended shape before use.",
+      "records": []
+    },
+    "OL_2024_2025_MATH_A_05": {
+      "source_dataset": "OL_2024_2025_Mathematics_Part_A_Test.json",
+      "source_sha256": "f454c40055258f106644d7e656a37b6177021e98666a9102552c5e7522477c59",
+      "status": "held",
+      "reason": "The required diagram was not included in the dataset; verify against the original question paper before use.",
+      "records": []
+    },
+    "OL_2024_2025_MATH_A_06": {
+      "source_dataset": "OL_2024_2025_Mathematics_Part_A_Test.json",
+      "source_sha256": "1ad17f1bf4f897e156ad476c52be9923a8618de6ece0d6477c6ef416e50e826b",
+      "status": "held",
+      "reason": "The required diagram was not included in the dataset; verify against the original question paper before use.",
+      "records": []
+    },
+    "OL_2024_2025_MATH_A_07": {
+      "source_dataset": "OL_2024_2025_Mathematics_Part_A_Test.json",
+      "source_sha256": "06021ce42c60f447b724eed794f9abcf2084d3e9eb62a3bee7b439e3e05700da",
+      "status": "accepted",
+      "reason": "Selected self-contained tasks were checked against the supplied text and existing concept catalog.",
+      "records": [
+        {
+          "suffix": "",
+          "grade": 10,
+          "concept_id": "g10_t1_07_factors_of_quadratic_expressions",
+          "concept_name": "Factors of Quadratic Expressions",
+          "question": "Find the factors: 2x² − 18",
+          "answer": "2(x − 3)(x + 3)",
+          "solution": "2x² − 18 = 2(x² − 9) = 2(x − 3)(x + 3).",
+          "mapping_evidence": "Factor out 2 and then use the difference of squares.",
+          "answer_review_evidence": "2x² − 18 = 2(x² − 9) = 2(x − 3)(x + 3).",
+          "correction": ""
+        }
+      ]
+    },
+    "OL_2024_2025_MATH_A_08": {
+      "source_dataset": "OL_2024_2025_Mathematics_Part_A_Test.json",
+      "source_sha256": "855db6722e6cd002ba5c78feff5f8729c44dee45ae78a4a969fb6db5bcdc743a",
+      "status": "accepted",
+      "reason": "Selected self-contained tasks were checked against the supplied text and existing concept catalog.",
+      "records": [
+        {
+          "suffix": "",
+          "grade": 10,
+          "concept_id": "g10_t2_18_logarithms_i",
+          "concept_name": "Logarithms I",
+          "question": "Taking that 10^0.6375 = 4.34, find the value of lg 43.4.",
+          "answer": "1.6375",
+          "solution": "43.4 = 4.34 × 10 = 10^0.6375 × 10 = 10^1.6375. Therefore lg 43.4 = 1.6375.",
+          "mapping_evidence": "Convert between exponential and logarithmic notation and use the power-of-ten characteristic.",
+          "answer_review_evidence": "43.4 = 4.34 × 10 = 10^0.6375 × 10 = 10^1.6375. Therefore lg 43.4 = 1.6375.",
+          "correction": ""
+        }
+      ]
+    },
+    "OL_2024_2025_MATH_A_09": {
+      "source_dataset": "OL_2024_2025_Mathematics_Part_A_Test.json",
+      "source_sha256": "fbd81052d8dca930fe7e8522e8e048cdea8d3ebf78799a847a6fc3e9f8fb8f42",
+      "status": "held",
+      "reason": "The source asks for angle markings on an absent figure and only a direct equality. Supply the diagram or a reviewed application task.",
+      "records": []
+    },
+    "OL_2024_2025_MATH_A_10": {
+      "source_dataset": "OL_2024_2025_Mathematics_Part_A_Test.json",
+      "source_sha256": "7bf69b40494f240befe7d76297209ce64c519bba118c6669f53140e521e84dbd",
+      "status": "accepted",
+      "reason": "Selected self-contained tasks were checked against the supplied text and existing concept catalog.",
+      "records": [
+        {
+          "suffix": "",
+          "grade": 10,
+          "concept_id": "g10_t3_28_surface_area_and_volume",
+          "concept_name": "Surface Area and Volume",
+          "question": "The height of a solid right circular cylinder is three times its base radius r. How many times of the paint required to paint only the base is needed to paint the curved surface of the cylinder completely? (The area of the curved surface of a solid right circular cylinder of base radius r and height h is 2πrh.)",
+          "answer": "6 times",
+          "solution": "Curved surface area = 2πr(3r) = 6πr². Area of base = πr². Ratio = 6πr² : πr² = 6 : 1.",
+          "mapping_evidence": "Compare the curved cylinder area with its base after substituting h = 3r.",
+          "answer_review_evidence": "Curved surface area = 2πr(3r) = 6πr². Area of base = πr². Ratio = 6πr² : πr² = 6 : 1.",
+          "correction": ""
+        }
+      ]
+    },
+    "OL_2024_2025_MATH_A_11": {
+      "source_dataset": "OL_2024_2025_Mathematics_Part_A_Test.json",
+      "source_sha256": "5313236302f29f1f044534ccc837feb095909a631681955d10f100edce0803a2",
+      "status": "accepted",
+      "reason": "Selected self-contained tasks were checked against the supplied text and existing concept catalog.",
+      "records": [
+        {
+          "suffix": "",
+          "grade": 11,
+          "concept_id": "g11_t3_25_probability",
+          "concept_name": "Probability",
+          "question": "Find the probability of obtaining 10 as the sum of the two digits on the face that falls downwards when an unbiased tetrahedral die with its four faces marked 1, 3, 5, 7 is tossed up twice.",
+          "answer": "3/16",
+          "solution": "There are 16 equally likely ordered outcomes. The outcomes giving a sum of 10 are (3,7), (7,3), and (5,5). Probability = 3/16.",
+          "mapping_evidence": "Two independent trials require an ordered sample space and an event count.",
+          "answer_review_evidence": "There are 16 equally likely ordered outcomes. The outcomes giving a sum of 10 are (3,7), (7,3), and (5,5). Probability = 3/16.",
+          "correction": ""
+        }
+      ]
+    },
+    "OL_2024_2025_MATH_A_12": {
+      "source_dataset": "OL_2024_2025_Mathematics_Part_A_Test.json",
+      "source_sha256": "a10395c7f2d14a7b30492eb00084ff9fd0240777c2c94e2c10c1198cf917402a",
+      "status": "held",
+      "reason": "The required diagram was not included in the dataset; verify against the original question paper before use.",
+      "records": []
+    },
+    "OL_2024_2025_MATH_A_13": {
+      "source_dataset": "OL_2024_2025_Mathematics_Part_A_Test.json",
+      "source_sha256": "5004f33845f96a2fe8d5a03a92a7f4bd2c9d68ad6c9f33307cdf716a835b3cfe",
+      "status": "accepted",
+      "reason": "Selected self-contained tasks were checked against the supplied text and existing concept catalog.",
+      "records": [
+        {
+          "suffix": "",
+          "grade": 10,
+          "concept_id": "g10_t2_17_sets",
+          "concept_name": "Sets",
+          "question": "E is the set of integers strictly between 0 and 7, A is the set of prime numbers strictly between 0 and 7, and B is the set of multiples of 2 strictly between 0 and 7. Find n(A).",
+          "answer": "3",
+          "solution": "A = {2, 3, 5}. Therefore n(A) = 3.",
+          "mapping_evidence": "Construct the set of primes in the stated exclusive interval and determine its cardinality.",
+          "answer_review_evidence": "A = {2, 3, 5}. Therefore n(A) = 3.",
+          "correction": ""
+        }
+      ]
+    },
+    "OL_2024_2025_MATH_A_14": {
+      "source_dataset": "OL_2024_2025_Mathematics_Part_A_Test.json",
+      "source_sha256": "eb477568b5a3f6eaaaed455554d4ae34818dca388e1f205d38c06e640fba1668",
+      "status": "accepted",
+      "reason": "Selected self-contained tasks were checked against the supplied text and existing concept catalog.",
+      "records": [
+        {
+          "suffix": "",
+          "grade": 10,
+          "concept_id": "g10_t2_12_algebraic_fractions",
+          "concept_name": "Algebraic Fractions",
+          "question": "For nonzero x and y, simplify (3x^2 * 2y)/(8xy).",
+          "answer": "3x/4",
+          "solution": "(3x² × 2y) ÷ (8xy) = 6x²y/(8xy) = 3x/4.",
+          "mapping_evidence": "Simplify a quotient of monomials by cancellation of common numerical and variable factors.",
+          "answer_review_evidence": "(3x² × 2y) ÷ (8xy) = 6x²y/(8xy) = 3x/4.",
+          "correction": ""
+        }
+      ]
+    },
+    "OL_2024_2025_MATH_A_15": {
+      "source_dataset": "OL_2024_2025_Mathematics_Part_A_Test.json",
+      "source_sha256": "29a707e70d606a5f7abab957b14c78ee9a4af7de471ea6aeec2825d76860d1fa",
+      "status": "accepted",
+      "reason": "Selected self-contained tasks were checked against the supplied text and existing concept catalog.",
+      "records": [
+        {
+          "suffix": "",
+          "grade": 11,
+          "concept_id": "g11_t2_16_geometric_progression",
+          "concept_name": "Geometric progression",
+          "question": "The second term of a geometric progression is −6 and the third term is −12. What is the fifth term of this progression?",
+          "answer": "−48",
+          "solution": "ar = −6 and ar² = −12. Dividing gives r = 2. Then a = −3, so the fifth term ar⁴ = −3 × 16 = −48.",
+          "mapping_evidence": "Infer the common ratio from adjacent terms and then find the fifth term.",
+          "answer_review_evidence": "ar = −6 and ar² = −12. Dividing gives r = 2. Then a = −3, so the fifth term ar⁴ = −3 × 16 = −48.",
+          "correction": ""
+        }
+      ]
+    },
+    "OL_2024_2025_MATH_A_16": {
+      "source_dataset": "OL_2024_2025_Mathematics_Part_A_Test.json",
+      "source_sha256": "b67c9dbe0d127c40db97640eb9afa7edf8dbd024e638130f22862ffaff7532e9",
+      "status": "held",
+      "reason": "The required diagram was not included in the dataset; verify against the original question paper before use.",
+      "records": []
+    },
+    "OL_2024_2025_MATH_A_17": {
+      "source_dataset": "OL_2024_2025_Mathematics_Part_A_Test.json",
+      "source_sha256": "dc27371f9c5ad4827f465fd43925aa81dfa8489422eba3ac7330878fb11eda42",
+      "status": "accepted",
+      "reason": "Selected self-contained tasks were checked against the supplied text and existing concept catalog.",
+      "records": [
+        {
+          "suffix": "",
+          "grade": 10,
+          "concept_id": "g10_t2_11_least_common_multiple_of_algebraic_expressions",
+          "concept_name": "Least Common Multiple of Algebraic Expressions",
+          "question": "Find the least common multiple of the following algebraic terms: 6x², 5xy, 2y²",
+          "answer": "30x²y²",
+          "solution": "6x² = 2 × 3 × x × x. 5xy = 5 × x × y. 2y² = 2 × y × y. Taking each factor at its highest power gives LCM = 2 × 3 × 5 × x² × y² = 30x²y².",
+          "mapping_evidence": "Compute the numerical LCM and take each variable to its highest required power.",
+          "answer_review_evidence": "6x² = 2 × 3 × x × x. 5xy = 5 × x × y. 2y² = 2 × y × y. Taking each factor at its highest power gives LCM = 2 × 3 × 5 × x² × y² = 30x²y².",
+          "correction": ""
+        }
+      ]
+    },
+    "OL_2024_2025_MATH_A_18": {
+      "source_dataset": "OL_2024_2025_Mathematics_Part_A_Test.json",
+      "source_sha256": "b34c236981216b826e1267ba182878394c986b7c0c28def0f86eeead6b9c0956",
+      "status": "accepted",
+      "reason": "Selected self-contained tasks were checked against the supplied text and existing concept catalog.",
+      "records": [
+        {
+          "suffix": "",
+          "grade": 10,
+          "concept_id": "g10_t3_28_surface_area_and_volume",
+          "concept_name": "Surface Area and Volume",
+          "question": "The area of the triangular cross section of a right prism is 616 cm². The volume of a right circular cylinder of the same height as the prism, and base radius r, is equal to the volume of the prism. Find the value of r in centimetres. (The volume of a right circular cylinder of base radius r and height h is πr²h.) Use pi = 22/7.",
+          "answer": "14 cm",
+          "solution": "Cylinder volume = prism volume: πr²h = 616h. Therefore πr² = 616. Using π = 22/7, r² = 196, so r = 14 cm.",
+          "mapping_evidence": "Equate the volumes of a prism and cylinder of equal height, then solve for the cylinder radius.",
+          "answer_review_evidence": "Cylinder volume = prism volume: πr²h = 616h. Therefore πr² = 616. Using π = 22/7, r² = 196, so r = 14 cm.",
+          "correction": ""
+        }
+      ]
+    },
+    "OL_2024_2025_MATH_A_19": {
+      "source_dataset": "OL_2024_2025_Mathematics_Part_A_Test.json",
+      "source_sha256": "656ed2592de2489c47b1cc4c864a2e6006b4a60732dad8f1ac4513f9362eeef7",
+      "status": "held",
+      "reason": "The required diagram was not included in the dataset; verify against the original question paper before use.",
+      "records": []
+    },
+    "OL_2024_2025_MATH_A_20": {
+      "source_dataset": "OL_2024_2025_Mathematics_Part_A_Test.json",
+      "source_sha256": "86ce7ef5b975764688f546f8662e08289e186b9e3757b92839cf1cdb56a0db8b",
+      "status": "accepted",
+      "reason": "Selected self-contained tasks were checked against the supplied text and existing concept catalog.",
+      "records": [
+        {
+          "suffix": "",
+          "grade": 10,
+          "concept_id": "g10_t2_20_graphs",
+          "concept_name": "Graphs",
+          "question": "Find the equation of the straight line that passes through the points (4, 6) and (6, 9) in the Cartesian plane.",
+          "answer": "y = 3x/2",
+          "solution": "Gradient m = (9 − 6)/(6 − 4) = 3/2. Using y = mx + c and (4,6), c = 0. Therefore y = 3x/2.",
+          "mapping_evidence": "Determine the gradient from two points and solve for the intercept.",
+          "answer_review_evidence": "Gradient m = (9 − 6)/(6 − 4) = 3/2. Using y = mx + c and (4,6), c = 0. Therefore y = 3x/2.",
+          "correction": ""
+        }
+      ]
+    },
+    "OL_2024_2025_MATH_A_21": {
+      "source_dataset": "OL_2024_2025_Mathematics_Part_A_Test.json",
+      "source_sha256": "8ac82130105e06385fb0a0888003ae6d3ee9afad39d93fde45e76eb9051bfe8a",
+      "status": "held",
+      "reason": "The required diagram was not included in the dataset; verify against the original question paper before use.",
+      "records": []
+    },
+    "OL_2024_2025_MATH_A_22": {
+      "source_dataset": "OL_2024_2025_Mathematics_Part_A_Test.json",
+      "source_sha256": "5d4bb685fddc593ab934ec9d8b52798bc7d0ecf39c4b4e5ef754d816ef9322f2",
+      "status": "accepted",
+      "reason": "Selected self-contained tasks were checked against the supplied text and existing concept catalog.",
+      "records": [
+        {
+          "suffix": "",
+          "grade": 11,
+          "concept_id": "g11_t2_09_percentages",
+          "concept_name": "Percentages",
+          "question": "Ramani deposited a certain amount of money for two years in a finance company that pays an annual interest rate of 10%, with the interest compounded annually. The interest that she received for the second year only is 660 rupees and the total amount she received at the end of two years is 7260 rupees. Find the amount she deposited.",
+          "answer": "Rs. 6000",
+          "solution": "The second-year interest is 660, so the amount at the beginning of the second year is 660 × 100/10 = Rs. 6600. Initial deposit = 6600 × 100/110 = Rs. 6000.",
+          "mapping_evidence": "Reverse two stages of annually compounded interest.",
+          "answer_review_evidence": "The second-year interest is 660, so the amount at the beginning of the second year is 660 × 100/10 = Rs. 6600. Initial deposit = 6600 × 100/110 = Rs. 6000.",
+          "correction": ""
+        }
+      ]
+    },
+    "OL_2024_2025_MATH_A_23": {
+      "source_dataset": "OL_2024_2025_Mathematics_Part_A_Test.json",
+      "source_sha256": "e4ff64e4d8e9152563a13d039e863aa0171b2613dee4f62b0c9d6982930b893c",
+      "status": "held",
+      "reason": "The required diagram was not included in the dataset; verify against the original question paper before use.",
+      "records": []
+    },
+    "OL_2024_2025_MATH_A_24": {
+      "source_dataset": "OL_2024_2025_Mathematics_Part_A_Test.json",
+      "source_sha256": "c042ba986f087c2ef3b4008e7f697da75f52bdc3f555b4adac749d0ee58548f3",
+      "status": "accepted",
+      "reason": "Selected self-contained tasks were checked against the supplied text and existing concept catalog.",
+      "records": [
+        {
+          "suffix": "",
+          "grade": 10,
+          "concept_id": "g10_t3_24_algebraic_inequalities",
+          "concept_name": "Algebraic Inequalities",
+          "question": "Find the negative integral solutions of the inequality 3x + 11 > 2.",
+          "answer": "−1 and −2",
+          "solution": "3x + 11 > 2 gives 3x > −9, hence x > −3. The negative integers satisfying this are −2 and −1.",
+          "mapping_evidence": "Solve a strict linear inequality and restrict the result to negative integers.",
+          "answer_review_evidence": "3x + 11 > 2 gives 3x > −9, hence x > −3. The negative integers satisfying this are −2 and −1.",
+          "correction": ""
+        }
+      ]
+    },
+    "OL_2024_2025_MATH_A_25": {
+      "source_dataset": "OL_2024_2025_Mathematics_Part_A_Test.json",
+      "source_sha256": "2031c2d0d368850271b04bdd312abc5710db6a47cce656d89baf961c0bef5c18",
+      "status": "held",
+      "reason": "The required diagram was not included in the dataset; verify against the original question paper before use.",
+      "records": []
+    },
+    "OL_2024_2025_MATH_B_01": {
+      "source_dataset": "OL_2024_2025_Mathematics_Part_B_Test_verified.json",
+      "source_sha256": "32948e86d287dedcd0982315862bae5712de3e607ee0bd8758689b79821c0b47",
+      "status": "accepted",
+      "reason": "Selected self-contained tasks were checked against the supplied text and existing concept catalog.",
+      "records": [
+        {
+          "suffix": "i",
+          "grade": 10,
+          "concept_id": "g10_t1_03_fractions",
+          "concept_name": "Fractions",
+          "question": "Janaka pays income tax of 6% on the amount that he earns above 100 000 rupees, when his monthly salary is more than this amount. In a certain month, he puts aside for food, 1/6 of the amount he received after paying the tax. He puts aside 3/5 of the remaining amount for other expenses. What fraction remains after the food allocation?",
+          "answer": "5/6",
+          "solution": "The complement of 1/6 is 1-1/6=5/6.",
+          "mapping_evidence": "Combine fractional allocations with the stated fictional tax rule; use the concept of the requested calculation.",
+          "answer_review_evidence": "The complement of 1/6 is 1-1/6=5/6.",
+          "correction": ""
+        },
+        {
+          "suffix": "ii",
+          "grade": 10,
+          "concept_id": "g10_t1_03_fractions",
+          "concept_name": "Fractions",
+          "question": "Janaka pays income tax of 6% on the amount that he earns above 100 000 rupees, when his monthly salary is more than this amount. In a certain month, he puts aside for food, 1/6 of the amount he received after paying the tax. He puts aside 3/5 of the remaining amount for other expenses. What fraction of the after-tax income remains after food and other expenses?",
+          "answer": "1/3",
+          "solution": "The remaining fraction is (1-1/6)*(1-3/5)=(5/6)*(2/5)=1/3.",
+          "mapping_evidence": "Combine fractional allocations with the stated fictional tax rule; use the concept of the requested calculation.",
+          "answer_review_evidence": "The remaining fraction is (1-1/6)*(1-3/5)=(5/6)*(2/5)=1/3.",
+          "correction": ""
+        },
+        {
+          "suffix": "iii_received",
+          "grade": 10,
+          "concept_id": "g10_t1_03_fractions",
+          "concept_name": "Fractions",
+          "question": "Janaka pays income tax of 6% on the amount that he earns above 100 000 rupees, when his monthly salary is more than this amount. In a certain month, he puts aside for food, 1/6 of the amount he received after paying the tax. He puts aside 3/5 of the remaining amount for other expenses. If Rs. 39600 remains after both allocations, what was the after-tax income?",
+          "answer": "Rs. 118800",
+          "solution": "The retained fraction is 1/3, so after-tax income is 39600*3=118800.",
+          "mapping_evidence": "Combine fractional allocations with the stated fictional tax rule; use the concept of the requested calculation.",
+          "answer_review_evidence": "The retained fraction is 1/3, so after-tax income is 39600*3=118800.",
+          "correction": ""
+        },
+        {
+          "suffix": "iii_food",
+          "grade": 10,
+          "concept_id": "g10_t1_03_fractions",
+          "concept_name": "Fractions",
+          "question": "Janaka pays income tax of 6% on the amount that he earns above 100 000 rupees, when his monthly salary is more than this amount. In a certain month, he puts aside for food, 1/6 of the amount he received after paying the tax. He puts aside 3/5 of the remaining amount for other expenses. If Rs. 39600 remains after both allocations, how much was set aside for food?",
+          "answer": "Rs. 19800",
+          "solution": "The retained fraction is 1/3, giving after-tax income 118800. Food is 118800/6=19800.",
+          "mapping_evidence": "Combine fractional allocations with the stated fictional tax rule; use the concept of the requested calculation.",
+          "answer_review_evidence": "The retained fraction is 1/3, giving after-tax income 118800. Food is 118800/6=19800.",
+          "correction": ""
+        },
+        {
+          "suffix": "iv",
+          "grade": 10,
+          "concept_id": "g10_t2_13_percentages",
+          "concept_name": "Percentages",
+          "question": "Janaka pays income tax of 6% on the amount that he earns above 100 000 rupees, when his monthly salary is more than this amount. In a certain month, he puts aside for food, 1/6 of the amount he received after paying the tax. He puts aside 3/5 of the remaining amount for other expenses. If Rs. 39600 remains after both allocations, what was the salary before tax?",
+          "answer": "Rs. 120000",
+          "solution": "The after-tax income is 39600*3=118800. For salary S, S-0.06*(S-100000)=118800, hence 0.94*S=112800 and S=120000. The taxable income is 20000 and tax is 1200.",
+          "mapping_evidence": "Combine fractional allocations with the stated fictional tax rule; use the concept of the requested calculation.",
+          "answer_review_evidence": "The after-tax income is 39600*3=118800. For salary S, S-0.06*(S-100000)=118800, hence 0.94*S=112800 and S=120000. The taxable income is 20000 and tax is 1200.",
+          "correction": "The supplied working calls 18800 the taxable income. Corrected to 20000; the final salary remains 120000."
+        },
+        {
+          "suffix": "v",
+          "grade": 10,
+          "concept_id": "g10_t2_13_percentages",
+          "concept_name": "Percentages",
+          "question": "Janaka pays income tax of 6% on the amount that he earns above 100 000 rupees, when his monthly salary is more than this amount. In a certain month, he puts aside for food, 1/6 of the amount he received after paying the tax. He puts aside 3/5 of the remaining amount for other expenses. Suppose Rs. 39600 previously remained after both allocations. Later the tax threshold rises and Janaka pays no tax. His salary and food spending do not change. What percentage of his salary does he now spend on food?",
+          "answer": "16.5%",
+          "solution": "Previously the after-tax income was 118800, food spending 19800, and salary 120000. With the same salary and food spending, the percentage is 19800/120000*100=16.5%.",
+          "mapping_evidence": "Combine fractional allocations with the stated fictional tax rule; use the concept of the requested calculation.",
+          "answer_review_evidence": "Previously the after-tax income was 118800, food spending 19800, and salary 120000. With the same salary and food spending, the percentage is 19800/120000*100=16.5%.",
+          "correction": ""
+        }
+      ]
+    },
+    "OL_2024_2025_MATH_B_02": {
+      "source_dataset": "OL_2024_2025_Mathematics_Part_B_Test_verified.json",
+      "source_sha256": "563d2117d338bceb0d1cf4eaf6f9aa6bffc6045d01e9e255ea24d1802ed8b588",
+      "status": "accepted",
+      "reason": "Only geometry parts (b)(i)-(ii) are accepted after expressing the stated joined figure in text. Travel parts need the missing graph: the 15 km distance appears only in the supplied answer, not the givens.",
+      "records": [
+        {
+          "suffix": "b_i",
+          "grade": 10,
+          "concept_id": "g10_t1_01_perimeter",
+          "concept_name": "Perimeter",
+          "question": "A rectangle ABCD is joined to a semicircle along AB. The shared side AB is the semicircle diameter, 28 cm, and BC is 77 cm. Use pi=22/7. Find the outside perimeter of the combined figure.",
+          "answer": "226 cm",
+          "solution": "The shared diameter is internal. The outside boundary is two 77 cm sides, the opposite 28 cm side, and a semicircular arc pi*14=44. Total=77+77+28+44=226 cm.",
+          "mapping_evidence": "Identify the external boundary of a rectangle joined to a semicircle and add lengths.",
+          "answer_review_evidence": "The shared diameter is internal. The outside boundary is two 77 cm sides, the opposite 28 cm side, and a semicircular arc pi*14=44. Total=77+77+28+44=226 cm.",
+          "correction": ""
+        },
+        {
+          "suffix": "b_ii",
+          "grade": 10,
+          "concept_id": "g10_t1_06_area",
+          "concept_name": "Area",
+          "question": "A rectangle ABCD is joined to a semicircle along AB. The shared side AB is the semicircle diameter, 28 cm, and BC is 77 cm. Use pi=22/7. How many times the semicircle area is the rectangle area?",
+          "answer": "7",
+          "solution": "Rectangle area=77*28=2156 cm^2. Semicircle area=(1/2)*(22/7)*14^2=308 cm^2. The ratio is 2156/308=7.",
+          "mapping_evidence": "Compute areas of a rectangle and semicircle, then compare them as a ratio.",
+          "answer_review_evidence": "Rectangle area=77*28=2156 cm^2. Semicircle area=(1/2)*(22/7)*14^2=308 cm^2. The ratio is 2156/308=7.",
+          "correction": ""
+        }
+      ]
+    },
+    "OL_2024_2025_MATH_B_05": {
+      "source_dataset": "OL_2024_2025_Mathematics_Part_B_Test_verified.json",
+      "source_sha256": "5e469fd10ff3cb2fe3210efd804c7897d5527091acd5e2f7f837188596b19da2",
+      "status": "accepted",
+      "reason": "Parts (i),(ii),(iv) are accepted as text tasks; the branch-labelling task (iii) supplies givens to part (iv). The contradictory part (iv) answer is corrected with an explicit derivation.",
+      "records": [
+        {
+          "suffix": "i",
+          "grade": 11,
+          "concept_id": "g11_t3_25_probability",
+          "concept_name": "Probability",
+          "question": "In a school, for a certain sport, there are four boys and a girl in the grade 10 team and two boys and three girls in the grade 11 team. For the first round of a competition between the two teams, a child from grade 10 and a child from grade 11 are picked randomly.How many equally likely pairs of children can be selected, distinguishing the two teams?",
+          "answer": "25",
+          "solution": "There are 5 choices from each team, giving 5*5=25 pairs.",
+          "mapping_evidence": "Build the sample space of two independent selections.",
+          "answer_review_evidence": "There are 5 choices from each team, giving 5*5=25 pairs.",
+          "correction": ""
+        },
+        {
+          "suffix": "ii",
+          "grade": 11,
+          "concept_id": "g11_t3_25_probability",
+          "concept_name": "Probability",
+          "question": "In a school, for a certain sport, there are four boys and a girl in the grade 10 team and two boys and three girls in the grade 11 team. For the first round of a competition between the two teams, a child from grade 10 and a child from grade 11 are picked randomly.Find the probability that exactly one selected child is a boy.",
+          "answer": "14/25",
+          "solution": "The favourable pairs are 4*3+1*2=14 out of 5*5=25.",
+          "mapping_evidence": "Combine mutually exclusive cases in a product sample space.",
+          "answer_review_evidence": "The favourable pairs are 4*3+1*2=14 out of 5*5=25.",
+          "correction": ""
+        },
+        {
+          "suffix": "iv",
+          "grade": 11,
+          "concept_id": "g11_t3_25_probability",
+          "concept_name": "Probability",
+          "question": "In a school, for a certain sport, there are four boys and a girl in the grade 10 team and two boys and three girls in the grade 11 team. For the first round of a competition between the two teams, a child from grade 10 and a child from grade 11 are picked randomly.When exactly one child is a boy, Grade 10 wins with probability 4/10; otherwise it wins with probability 3/10. Find the probability that Grade 10 does not win.",
+          "answer": "161/250",
+          "solution": "Exactly one boy has probability 14/25; its complement has probability 11/25. Non-winning probability is (14/25)*(6/10)+(11/25)*(7/10)=161/250.",
+          "mapping_evidence": "Apply a two-stage probability tree and sum the probabilities of disjoint non-winning paths.",
+          "answer_review_evidence": "Exactly one boy has probability 14/25; its complement has probability 11/25. Non-winning probability is (14/25)*(6/10)+(11/25)*(7/10)=161/250.",
+          "correction": "The subquestion answer 149/250 conflicts with the parent final answer and working. Recalculation verifies 161/250."
+        }
+      ]
+    }
+  }
+}
